@@ -31,7 +31,7 @@ var mostrarOcultar = function(divtexte) {
   }
 }
 
-var closeBubble = document.getElementsByName('close-bubble');
+var closeBubble = document.getElementById('close-bubble');
 closeBubble.addEventListener('click', function(e) {
   e.preventDefault();
 document.getElementsByClassName('tooltiptext').style.visibility= "hidden";

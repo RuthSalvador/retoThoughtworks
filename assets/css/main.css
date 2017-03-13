@@ -8,71 +8,89 @@
 
 .tooltip .tooltiptext {
   position: relative;
-  width: 370px;
-  height: 80px;
+  width: 510px;
+  height: 95px;
   padding: 0px;
-  background: #c11c1c;
+  background: #b6e5e7;
+  -webkit-border-radius: 10px;
+  -moz-border-radius: 10px;
   border-radius: 10px;
-  /*visibility: hidden;*/
+  border: #814917 solid 4px;
 }
+  /*visibility: hidden;*/
 
-.tooltip .tooltiptext::after {
-  contenido: '';
+
+.tooltip .tooltiptext:after {
+  content: '';
   position: absolute;
   border-style: solid;
-  border-width: 0 14px 17px;
-  border-color: #16cee0 transparent;
+  border-width: 0 12px 22px;
+  border-color: #b6e5e7 transparent;
   display: block;
   width: 0;
   z-index: 1;
-  margin-left: -14px;
-  top: -17px;
-  left: 19%;
+  margin-left: -12px;
+  top: -22px;
+  left: 13%;
 }
-/*
-.tooltip:hover .tooltiptext {
+
+.tooltip .tooltiptext:before{
+  content: '';
+  position: absolute;
+  border-style: solid;
+  border-width: 0 15px 25px;
+  border-color: #814917 transparent;
+  display: block;
+  width: 0;
+  z-index: 0;
+  margin-left: -15px;
+  top: -29px;
+  left: 13%;
+}
+
+/*.tooltip:hover .tooltiptext {
     visibility: visible;
-}
-*/
+}*/
+
 /*Pestañas*/
 
-#container input {
-	height: 2.5em;
+.pestanaGrup {
 	visibility: hidden;
+
+
 }
 
 #container label {
 	background: #f9f9f9;  /* Fondo de las pestañas */
-	border-radius: .25em .25em 0 0;
-	color: #888;  /* Color del texto de las pestañas */
-	cursor: pointer;
+	border-radius: .55em .55em 0 0;
+	color: #000000;  /* Color del texto de las pestañas */
+	/*cursor: pointer;
 	display: block;
 	float: left;
 	font-size: 1em;  /* Tamaño del texto de las pestañas */
-	height: 2.5em;
-	line-height: 2.5em;
-	margin-right: .25em;
-	padding: 0 1.5em;
+border: #000000 solid 3px;
 	text-align: center;
+
 }
 
 #container input:hover + label {
-	background: #ddd;  /* Fondo de las pestañas al pasar el cursor por encima */
-	color: #666;  /* Color del texto de las pestañas al pasar el cursor por encima */
+	background: #5e5c5c;  /* Fondo de las pestañas al pasar el cursor por encima */
+	color: #ffffff;  /* Color del texto de las pestañas al pasar el cursor por encima */
+
 }
 
 #container input:checked + label {
-	background: #f1f1f1;  /* Fondo de las pestañas al presionar */
-	color: #444; /* Color de las pestañas al presionar */
+	background: #5e5c5c;  /* Fondo de las pestañas al presionar */
+	color: #ffffff; /* Color de las pestañas al presionar */
 	position: relative;
 	z-index: 6;
 }
 
 #contenido {
-	background: #f1f1f1;  /* Fondo del contenido*/
-	border-radius: 0 .25em .25em .25em;
+	background: #ffffff;  /* Fondo del contenido*/
+	/*border-radius: 0 .25em .25em .25em;
 	min-height: 20em;  /* Alto del contenido */
-	position: relative;
+	/*position: relative;
 	width: 100%;
 	z-index: 5;
 }
