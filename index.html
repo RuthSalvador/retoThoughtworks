@@ -18,45 +18,37 @@
     </header>
     <h1>Cruise</h1>
     <div class="container">
-      <table border="1" width="50%" >
-        <tr height="50px">
+      <table class="agents" border="1" width="70%" height="60%">
+        <tr height="10%" width="90%">
           <td colspan="2">Agents
-            <button type="button" name="buttonAll">All</button>
-            <button type="button" name="buttonPhysical">Physical</button>
-            <button type="button" name="buttonVirtual">Virtual</button>
-
-
-bjstdmngbgr02.thougthworks.com
-idle
-building
-/var/lib/cruise-agent
-
-
+            <button type="button" name="bts-all">All</button>
+            <button type="button" name="bts-physical">Physical</button>
+            <button type="button" name="bts-virtual">Virtual</button>
           </td>
         </tr>
-        <tr height="400px">
-          <td>1</td>
-
-          <td>
-            <table border="1">
-              <tr>
-                <td>
-                  <div>Summary
-                    <hr>
-                    building 2
-                    idle 2
-                  </div>
-                </td>
-              </tr>
-              <tr>
-                <td>
-                  <div>History
-                  <hr>
-                  bjstdmngbgr02/Acceptance_test
-                  </div>
-                </td>
-              </tr>
-            </table>
+        <tr height="90%" width="10%">
+          <td class="td-physicall" width="80%">
+            <div class="user-resources">
+              <span id="user-email">bjstdmngbgr02.thougthworks.com</span>
+              <span> | idle |  building | /var/lib/cruise-agent </span><br>
+              <a href="#">Specify Resources</a>
+              <span>| Resources:</span>
+              <div class="bubble">
+                <span>(Separate multiple resouces names with commas)</span>
+                <input type="text" name="resources">
+                <button type="button" name="bts-bubble" >Add resources</button>
+                <button type="button" name="bts-bubble" >Close</button>
+              </div>
+            </div>
+          </td>
+          <td class="td-side-bar" width="20%">
+            <div>Summary<hr>
+              <p>building 2</p>
+              <br><br>
+            </div>
+            <div>History<hr>
+              <p>bjstdmngbgr02/Acceptance_test</p>
+            </div>
           </td>
         </tr>
       </table>
