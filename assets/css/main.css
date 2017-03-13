@@ -1,3 +1,5 @@
+/*Tooltip speech*/
+
 .tooltip {
     position: relative;
     display: inline-block;
@@ -11,7 +13,7 @@
   padding: 0px;
   background: #c11c1c;
   border-radius: 10px;
-  visibility: hidden;
+  /*visibility: hidden;*/
 }
 
 .tooltip .tooltiptext::after {
@@ -27,10 +29,12 @@
   top: -17px;
   left: 19%;
 }
-
-.tooltip:active .tooltiptext {
+/*
+.tooltip:hover .tooltiptext {
     visibility: visible;
 }
+*/
+/*Pestañas*/
 
 #container input {
 	height: 2.5em;
@@ -65,7 +69,7 @@
 }
 
 #contenido {
-	background: #f1f1f1;  /* Fondo del contenido */
+	background: #f1f1f1;  /* Fondo del contenido*/
 	border-radius: 0 .25em .25em .25em;
 	min-height: 20em;  /* Alto del contenido */
 	position: relative;
@@ -73,22 +77,18 @@
 	z-index: 5;
 }
 
-#contenido div {
-	opacity: 0;
-
-
-
+.hidden {
+  display: none;
 }
 
-
-
+/*
 #container input#pest1:checked ~ #contenido #contenido-1,
 #container input#pest2:checked ~ #contenido #contenido-2,
 #container input#pest3:checked ~ #contenido #contenido-3,
 #container input#pest4:checked ~ #contenido #contenido-4 {
     opacity: 1;
     z-index: 100;
-}
 input.visible {
   visibility: visible !important;
 }
+}*/
