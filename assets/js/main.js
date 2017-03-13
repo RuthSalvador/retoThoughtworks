@@ -1,5 +1,6 @@
+//Tabs de navegador
 var mostrarOcultar = function(divtexte) {
-//Guardo Ids
+
   var text1 = document.getElementById('contenido-1');
   var text2 = document.getElementById('contenido-2');
   var text3 = document.getElementById('contenido-3');
@@ -31,15 +32,16 @@ var mostrarOcultar = function(divtexte) {
   }
 }
 
+//Tiptool
 var closeBubble = document.getElementById('close-bubble');
 closeBubble.addEventListener('click', function(e) {
   e.preventDefault();
-document.getElementsByClassName('tooltiptext').style.visibility= "hidden";
+  document.getElementsByClassName('tooltiptext').style.visibility="hidden";
 });
 
 var addResources = document.getElementById('specify-resources');
 addResources.addEventListener('click', function(e) {
   e.preventDefault();
   alert('msg');
-  document.getElementsByClassName('tooltiptext').style.visibility= "visible";
+  document.getElementsByClassName('tooltiptext').style.visibility="visible";
 });

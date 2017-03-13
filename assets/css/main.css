@@ -16,8 +16,9 @@
   -moz-border-radius: 10px;
   border-radius: 10px;
   border: #814917 solid 4px;
+  visibility: hidden;
 }
-  /*visibility: hidden;*/
+
 
 
 .tooltip .tooltiptext:after {
@@ -53,11 +54,12 @@
 }*/
 
 /*Pestañas*/
+.hidden {
+  display: none;
+}
 
 .pestanaGrup {
 	visibility: hidden;
-
-
 }
 
 #container label {
@@ -68,7 +70,7 @@
 	display: block;
 	float: left;
 	font-size: 1em;  /* Tamaño del texto de las pestañas */
-border: #000000 solid 3px;
+  border: #000000 solid 3px;
 	text-align: center;
 
 }
@@ -94,19 +96,3 @@ border: #000000 solid 3px;
 	width: 100%;
 	z-index: 5;
 }
-
-.hidden {
-  display: none;
-}
-
-/*
-#container input#pest1:checked ~ #contenido #contenido-1,
-#container input#pest2:checked ~ #contenido #contenido-2,
-#container input#pest3:checked ~ #contenido #contenido-3,
-#container input#pest4:checked ~ #contenido #contenido-4 {
-    opacity: 1;
-    z-index: 100;
-input.visible {
-  visibility: visible !important;
-}
-}*/
