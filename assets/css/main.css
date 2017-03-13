@@ -9,17 +9,17 @@
   width: 370px;
   height: 80px;
   padding: 0px;
-  background: #FFFFFF;
+  background: #c11c1c;
   border-radius: 10px;
   visibility: hidden;
 }
 
 .tooltip .tooltiptext::after {
-  content: '';
+  contenido: '';
   position: absolute;
   border-style: solid;
   border-width: 0 14px 17px;
-  border-color: #FFFFFF transparent;
+  border-color: #16cee0 transparent;
   display: block;
   width: 0;
   z-index: 1;
@@ -28,6 +28,67 @@
   left: 19%;
 }
 
-.tooltip:hover .tooltiptext {
+.tooltip:active .tooltiptext {
     visibility: visible;
+}
+
+#container input {
+	height: 2.5em;
+	visibility: hidden;
+}
+
+#container label {
+	background: #f9f9f9;  /* Fondo de las pestañas */
+	border-radius: .25em .25em 0 0;
+	color: #888;  /* Color del texto de las pestañas */
+	cursor: pointer;
+	display: block;
+	float: left;
+	font-size: 1em;  /* Tamaño del texto de las pestañas */
+	height: 2.5em;
+	line-height: 2.5em;
+	margin-right: .25em;
+	padding: 0 1.5em;
+	text-align: center;
+}
+
+#container input:hover + label {
+	background: #ddd;  /* Fondo de las pestañas al pasar el cursor por encima */
+	color: #666;  /* Color del texto de las pestañas al pasar el cursor por encima */
+}
+
+#container input:checked + label {
+	background: #f1f1f1;  /* Fondo de las pestañas al presionar */
+	color: #444; /* Color de las pestañas al presionar */
+	position: relative;
+	z-index: 6;
+}
+
+#contenido {
+	background: #f1f1f1;  /* Fondo del contenido */
+	border-radius: 0 .25em .25em .25em;
+	min-height: 20em;  /* Alto del contenido */
+	position: relative;
+	width: 100%;
+	z-index: 5;
+}
+
+#contenido div {
+	opacity: 0;
+
+
+
+}
+
+
+
+#container input#pest1:checked ~ #contenido #contenido-1,
+#container input#pest2:checked ~ #contenido #contenido-2,
+#container input#pest3:checked ~ #contenido #contenido-3,
+#container input#pest4:checked ~ #contenido #contenido-4 {
+    opacity: 1;
+    z-index: 100;
+}
+input.visible {
+  visibility: visible !important;
 }
