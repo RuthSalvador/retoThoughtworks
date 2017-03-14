@@ -129,11 +129,19 @@ function Agent(type, status, web, ip, path) {
             label.appendChild(document.createTextNode(agent.resources[i]))
             var newResource = document.createElement('input');
             newResource.className = 'newResource';
-            newResource.type = 'radio';
+            newResource.type = 'button';
+            newResource.value = 'X';
 
             label.appendChild(newResource);
             resourcesSpan.appendChild(label);
           }
+
+          newResource.addEventListener('click', function(e){
+            if (label.parentNode){
+              label.parentNode.removeChild(label);
+            }
+
+          });
 
         });
 
