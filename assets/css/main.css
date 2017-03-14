@@ -19,8 +19,6 @@
   visibility: hidden;
 }
 
-
-
 .tooltip .tooltiptext:after {
   content: '';
   position: absolute;
@@ -49,10 +47,14 @@
   left: 13%;
 }
 
-/*.tooltip:hover .tooltiptext {
+.tooltip .show {
     visibility: visible;
-}*/
-
+}
+/*
+.tooltip .notshow {
+    visibility: hidden;
+}
+*/
 /*Pestañas*/
 .hidden {
   display: none;

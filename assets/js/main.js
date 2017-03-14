@@ -36,12 +36,13 @@ var mostrarOcultar = function(divtexte) {
 var closeBubble = document.getElementById('close-bubble');
 closeBubble.addEventListener('click', function(e) {
   e.preventDefault();
-  document.getElementsByClassName('tooltiptext').style.visibility="hidden";
+  var tooltipOcultar = document.getElementById('bubble');
+  tooltipOcultar.classList.toggle("show");
 });
 
 var addResources = document.getElementById('specify-resources');
 addResources.addEventListener('click', function(e) {
   e.preventDefault();
-  alert('msg');
-  document.getElementsByClassName('tooltiptext').style.visibility="visible";
+  var tooltip = document.getElementById('bubble');
+  tooltip.classList.toggle("show");
 });
