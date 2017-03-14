@@ -93,7 +93,7 @@ function Agent(type, status, web, ip, path) {
       tooltip.appendChild(tooltipText);
 
         var enterResources = document.createElement('span');
-        enterResources.innerHTML = "(Separate multiple resouces names with commas)";
+        enterResources.innerHTML = "(Separate multiple resouces names with commas)<br>";
         tooltipText.appendChild(enterResources);
 
         var inputResources = document.createElement('input');
@@ -101,6 +101,9 @@ function Agent(type, status, web, ip, path) {
         inputResources.type = "text";
         inputResources.id = "input-resources";
         tooltipText.appendChild(inputResources);
+
+        var salto2 = document.createElement('br');
+        tooltipText.appendChild(salto2);
 
 
         var btAddResources = document.createElement('button');
@@ -113,9 +116,20 @@ function Agent(type, status, web, ip, path) {
           e.preventDefault();
           var newInput = inputResources.value;
           var inputSplited = newInput.split(',');
-          console.log(inputSplited);
+          //console.log(inputSplited);
           agent.resources.push(inputSplited);
-          console.log(agent);
+          console.log (agent.resources[0]);
+          // agregando for para los inputs
+          for (var i = 0; i < agent.resources.length; i++) {
+            var newResource = document.createElement('input');
+            //newResource.value = agent.resources[i];
+            newResource.className = 'newResource';
+            newResource.type = 'radio';
+            newResource.innerHTML = agent.resources[i];
+            tooltip.appendChild(newResource);
+          }
+
+
         });
 
         tooltipText.appendChild(btAddResources);
