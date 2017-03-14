@@ -132,6 +132,8 @@ closeBubble.addEventListener('click', function(e) {
   var tooltipOcultar = document.getElementById('bubble');
   console.log(tooltipOcultar);
   tooltipOcultar.classList.toggle("show");
+  document.getElementsByClassName('input')[0].value = "";
+
 });
 
 //Agregar resources
@@ -139,7 +141,9 @@ var addResources = document.getElementById('add-resources');
 addResources.addEventListener('click', function(e) {
   e.preventDefault();
   var newInput = (document.getElementsByClassName('input')[0].value);
-  agent.resources.push(newInput);
+  var inputSplited = newInput.split(',');
+  console.log(inputSplited);
+  agent.resources.push(inputSplited);
   console.log(agent);
 });
 
