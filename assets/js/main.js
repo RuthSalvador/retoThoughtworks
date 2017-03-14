@@ -57,12 +57,12 @@ function Agent(type, status, web, ip, path) {
 
     var ip = document.createElement('span');
     ip.className = "web";
-    ip.innerHTML = this.ip;
+    ip.innerHTML = "&nbsp;&nbsp;&nbsp;&nbsp; | " + this.ip;
     userResources.appendChild(ip);
 
     var path = document.createElement('span');
     path.className = "web";
-    path.innerHTML = this.path;
+    path.innerHTML = " | " + this.path;
     userResources.appendChild(path);
 
     var salto = document.createElement('br');
@@ -74,7 +74,7 @@ function Agent(type, status, web, ip, path) {
 
       var specifyResources = document.createElement('span');
       specifyResources.id = "specify-resources";
-      specifyResources.innerHTML = "Specify Resources";
+      specifyResources.innerHTML = " + Specify Resources";
       specifyResources.addEventListener('click', function (e) {
         e.preventDefault();
         var tooltipBubble = document.getElementById('bubble');
@@ -165,7 +165,8 @@ function Agent(type, status, web, ip, path) {
   }
 }
 
-var agent = new Agent("physicall", "building", "bjstdmngbgr02.thougthworks.com", "23.4324.24", "/var/lib/cruise-agent");
+var agent = new Agent("physicall", "building", "bjstdmngbgr02.thougthworks.com", "192.168.1.2", "/var/lib/cruise-agent");
+var age1 =  new Agent("physicall", "building", "bjstdmngbgr03.thougthworks.com", "192.168.1.2", "/var/lib/cruise-agent");
 agent.addResources();
 //console.log(agent);
 
