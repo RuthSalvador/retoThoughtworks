@@ -52,11 +52,25 @@ function Agent(type, status, web, ip, path) {
 
     var web = document.createElement('span');
     web.className = "web";
-    agentsDisplay.appendChild(web);
+    web.innerHTML = this.web;
+    userResources.appendChild(web);
+
+    var ip = document.createElement('span');
+    ip.className = "web";
+    ip.innerHTML = this.ip;
+    userResources.appendChild(ip);
+
+    var path = document.createElement('span');
+    path.className = "web";
+    path.innerHTML = this.path;
+    userResources.appendChild(path);
+
+    var salto = document.createElement('br');
+    userResources.appendChild(salto);
 
     var tooltip = document.createElement('div');
     tooltip.className = "tooltip";
-    agentsDisplay.appendChild(tooltip);
+    userResources.appendChild(tooltip);
 
       var specifyResources = document.createElement('span');
       specifyResources.id = "specify-resources";
@@ -77,9 +91,11 @@ function Agent(type, status, web, ip, path) {
         tooltipText.appendChild(enterResources);
 
         var inputResources = document.createElement('input');
+        inputResources.className = "input";
         inputResources.type = "text";
-        inputResources.name = "resources";
+        inputResources.id = "input-resources";
         tooltipText.appendChild(inputResources);
+
 
         var btAddResources = document.createElement('button');
         btAddResources.type = "button";
@@ -97,13 +113,13 @@ function Agent(type, status, web, ip, path) {
   }
 }
 
-var agent = new Agent("physicall", "building", "bjstdmngbgr02.thougthworks.com", "23.4324.24", "path");
+var agent = new Agent("physicall", "building", "bjstdmngbgr02.thougthworks.com", "23.4324.24", "/var/lib/cruise-agent");
 agent.addResources();
 console.log(agent);
 
 //Abrir tiptool
-var addResources = document.getElementById('specify-resources');
-addResources.addEventListener('click', function(e) {
+var openBubble = document.getElementById('specify-resources');
+openBubble.addEventListener('click', function(e) {
   e.preventDefault();
   var tooltipBubble = document.getElementById('bubble');
   tooltipBubble.classList.toggle("show");
@@ -118,6 +134,14 @@ closeBubble.addEventListener('click', function(e) {
   tooltipOcultar.classList.toggle("show");
 });
 
+//Agregar resources
+var addResources = document.getElementById('add-resources');
+addResources.addEventListener('click', function(e) {
+  e.preventDefault();
+  var newInput = (document.getElementsByClassName('input')[0].value);
+  agent.resources.push(newInput);
+  console.log(agent);
+});
 
 //Array de agents según type
 function AgentsManager() {
