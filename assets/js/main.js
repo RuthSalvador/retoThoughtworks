@@ -75,6 +75,12 @@ function Agent(type, status, web, ip, path) {
       var specifyResources = document.createElement('span');
       specifyResources.id = "specify-resources";
       specifyResources.innerHTML = "Specify Resources";
+      specifyResources.addEventListener('click', function (e) {
+        e.preventDefault();
+        var tooltipBubble = document.getElementById('bubble');
+        tooltipBubble.classList.toggle("show");
+      });
+
       tooltip.appendChild(specifyResources);
 
       var resources = document.createElement('span');
@@ -102,6 +108,16 @@ function Agent(type, status, web, ip, path) {
         btAddResources.name = "bts-bubble";
         btAddResources.id = "add-resources"
         btAddResources.innerHTML = "Add Resources";
+
+        btAddResources.addEventListener('click', function (e) {
+          e.preventDefault();
+          var newInput = inputResources.value;
+          var inputSplited = newInput.split(',');
+          console.log(inputSplited);
+          agent.resources.push(inputSplited);
+          console.log(agent);
+        });
+
         tooltipText.appendChild(btAddResources);
 
         var btClose = document.createElement('button');
@@ -109,6 +125,15 @@ function Agent(type, status, web, ip, path) {
         btClose.name = "bts-bubble";
         btClose.id = "close-bubble"
         btClose.innerHTML = "Close";
+
+        btClose.addEventListener('click', function (e) {
+          e.preventDefault();
+          var tooltipOcultar = document.getElementById('bubble');
+          console.log(tooltipOcultar);
+          tooltipOcultar.classList.toggle("show");
+          inputResources.value = "";
+        });
+
         tooltipText.appendChild(btClose);
   }
 }
@@ -118,13 +143,15 @@ agent.addResources();
 console.log(agent);
 
 //Abrir tiptool
+/*
 var openBubble = document.getElementById('specify-resources');
 openBubble.addEventListener('click', function(e) {
   e.preventDefault();
   var tooltipBubble = document.getElementById('bubble');
   tooltipBubble.classList.toggle("show");
 });
-
+*/
+/*
 //Cerrar Tiptool
 var closeBubble = document.getElementById('close-bubble');
 closeBubble.addEventListener('click', function(e) {
@@ -133,9 +160,9 @@ closeBubble.addEventListener('click', function(e) {
   console.log(tooltipOcultar);
   tooltipOcultar.classList.toggle("show");
   document.getElementsByClassName('input')[0].value = "";
-
 });
-
+*/
+/*
 //Agregar resources
 var addResources = document.getElementById('add-resources');
 addResources.addEventListener('click', function(e) {
@@ -146,7 +173,7 @@ addResources.addEventListener('click', function(e) {
   agent.resources.push(inputSplited);
   console.log(agent);
 });
-
+*/
 //Array de agents según type
 function AgentsManager() {
   this.all = [];
