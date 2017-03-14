@@ -1,3 +1,4 @@
+
 //Tabs de navegador
 var mostrarOcultar = function(divtexte) {
 
@@ -32,22 +33,6 @@ var mostrarOcultar = function(divtexte) {
   }
 }
 
-//Abrir tiptool
-var addResources = document.getElementById('specify-resources');
-addResources.addEventListener('click', function(e) {
-  e.preventDefault();
-  var tooltipBubble = document.getElementById('bubble');
-  tooltipBubble.classList.toggle("show");
-});
-
-//Cerrar Tiptool
-var closeBubble = document.getElementById('close-bubble');
-closeBubble.addEventListener('click', function(e) {
-  e.preventDefault();
-  var tooltipOcultar = document.getElementById('bubble');
-  tooltipOcultar.classList.toggle("show");
-});
-
 //Objeto agent
 function Agent(type, status, web, ip, path) {
   this.type = type;
@@ -75,6 +60,7 @@ function Agent(type, status, web, ip, path) {
 
       var specifyResources = document.createElement('span');
       specifyResources.id = "specify-resources";
+      specifyResources.innerHTML = "Specify Resources";
       tooltip.appendChild(specifyResources);
 
       var resources = document.createElement('span');
@@ -110,6 +96,28 @@ function Agent(type, status, web, ip, path) {
         tooltipText.appendChild(btClose);
   }
 }
+
+var agent = new Agent("physicall", "building", "bjstdmngbgr02.thougthworks.com", "23.4324.24", "path");
+agent.addResources();
+console.log(agent);
+
+//Abrir tiptool
+var addResources = document.getElementById('specify-resources');
+addResources.addEventListener('click', function(e) {
+  e.preventDefault();
+  var tooltipBubble = document.getElementById('bubble');
+  tooltipBubble.classList.toggle("show");
+});
+
+//Cerrar Tiptool
+var closeBubble = document.getElementById('close-bubble');
+closeBubble.addEventListener('click', function(e) {
+  e.preventDefault();
+  var tooltipOcultar = document.getElementById('bubble');
+  console.log(tooltipOcultar);
+  tooltipOcultar.classList.toggle("show");
+});
+
 
 //Array de agents según type
 function AgentsManager() {
