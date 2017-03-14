@@ -134,14 +134,14 @@ function Agent(type, status, web, ip, path) {
 
             label.appendChild(newResource);
             resourcesSpan.appendChild(label);
+
+            newResource.addEventListener('click', function(e){
+              if (e.target.parentNode){
+                e.target.parentNode.remove();
+              }
+
+            });
           }
-
-          newResource.addEventListener('click', function(e){
-            if (label.parentNode){
-              label.parentNode.removeChild(label);
-            }
-
-          });
 
         });
 
