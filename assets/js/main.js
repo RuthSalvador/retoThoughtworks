@@ -87,6 +87,9 @@ function Agent(type, status, web, ip, path) {
       resources.innerHTML = " | Resources:"
       tooltip.appendChild(resources);
 
+      var resourcesSpan = document.createElement('span');
+      tooltip.appendChild(resourcesSpan);
+
       var tooltipText = document.createElement('div');
       tooltipText.id = "bubble";
       tooltipText.className = "tooltiptext";
@@ -105,7 +108,6 @@ function Agent(type, status, web, ip, path) {
         var salto2 = document.createElement('br');
         tooltipText.appendChild(salto2);
 
-
         var btAddResources = document.createElement('button');
         btAddResources.type = "button";
         btAddResources.name = "bts-bubble";
@@ -116,19 +118,22 @@ function Agent(type, status, web, ip, path) {
           e.preventDefault();
           var newInput = inputResources.value;
           var inputSplited = newInput.split(',');
-          //console.log(inputSplited);
-          agent.resources.push(inputSplited);
+          agent.resources = agent.resources.concat(inputSplited);
           console.log (agent.resources[0]);
+
           // agregando for para los inputs
+          resourcesSpan.innerHTML = "";
+
           for (var i = 0; i < agent.resources.length; i++) {
+            var label = document.createElement("label");
+            label.appendChild(document.createTextNode(agent.resources[i]))
             var newResource = document.createElement('input');
-            //newResource.value = agent.resources[i];
             newResource.className = 'newResource';
             newResource.type = 'radio';
-            newResource.innerHTML = agent.resources[i];
-            tooltip.appendChild(newResource);
-          }
 
+            label.appendChild(newResource);
+            resourcesSpan.appendChild(label);
+          }
 
         });
 
@@ -143,7 +148,7 @@ function Agent(type, status, web, ip, path) {
         btClose.addEventListener('click', function (e) {
           e.preventDefault();
           var tooltipOcultar = document.getElementById('bubble');
-          console.log(tooltipOcultar);
+          //console.log(tooltipOcultar);
           tooltipOcultar.classList.toggle("show");
           inputResources.value = "";
         });
@@ -154,7 +159,7 @@ function Agent(type, status, web, ip, path) {
 
 var agent = new Agent("physicall", "building", "bjstdmngbgr02.thougthworks.com", "23.4324.24", "/var/lib/cruise-agent");
 agent.addResources();
-console.log(agent);
+//console.log(agent);
 
 //Abrir tiptool
 /*
