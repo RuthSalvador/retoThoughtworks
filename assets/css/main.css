@@ -29,10 +29,34 @@ th, td {
 }
 
 /*Tooltip speech*/
+.web {
+  font-size: 90%;
+  font-weight: bold;
+}
+
+.status {
+  font-size: 90%;
+}
+
+.ip {
+  font-size: 90%;
+}
+
+.path {
+  font-size: 90%;
+}
+
+.div-spans{
+  font-size: 80%;
+}
 
 .td-side-bar {
   width:20%;
-  font-size: 90%;
+  font-size: 80%;
+}
+
+.title-tab {
+
 }
 
 #container {
@@ -54,6 +78,10 @@ th, td {
 
 .div-spans {
   display: inline-block;
+}
+
+.tooltip{
+  font-size: 80%;
 }
 
 .tooltip .tooltiptext {
@@ -138,7 +166,7 @@ th, td {
 }
 
 #container input:checked + label {
-	background: #5e5c5c;  /* Fondo de las pestañas al presionar */
+	background: #606060;  /* Fondo de las pestañas al presionar */
 	color: #ffffff; /* Color de las pestañas al presionar */
 	position: relative;
 	z-index: 6;
