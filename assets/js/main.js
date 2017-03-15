@@ -105,15 +105,20 @@ function Agent(type, status, web, ip, path, agentId ) {
             label.appendChild(document.createTextNode(arrResources[i]))
             label.className = "name-resource";
 
-            var newResource = document.createElement('input');
-            newResource.className = 'newResource';
-            newResource.type = 'button';
-            newResource.value = 'X';
+            var deleteResource = document.createElement('input');
+            deleteResource.id = i;
+            deleteResource.className = 'deleteResource';
+            deleteResource.type = 'button';
+            deleteResource.value = 'x';
 
             spanLabelBtn.appendChild(label);
-            spanLabelBtn.appendChild(newResource);
+            spanLabelBtn.appendChild(deleteResource);
 
-            newResource.addEventListener('click', function(e){
+            deleteResource.addEventListener('click', function(e){
+              var index = e.target.id;
+              console.log(index);
+              delete arrResources[index];
+              console.log(arrResources);
               if (e.target.parentNode){
                 e.target.parentNode.remove();
               }
