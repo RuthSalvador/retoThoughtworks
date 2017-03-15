@@ -17,7 +17,6 @@
       </nav>
     </header>
     <h1>Cruise</h1>
-
     <div id="container">
       <input id="pest1" type="radio" class="pestanaGrup" onclick="mostrarOcultar('contenido-1');">
         <label for="pest1">DASHBOARD</label>
@@ -28,25 +27,35 @@
       <input id="pest4" type="radio" class="pestanaGrup" onclick="mostrarOcultar('contenido-4');">
         <label for="pest4">HELP</label>
       <div id="contenido">
-        <div id="contenido-1"class="hidden">
-          <p>Esta es la pestaña 1</p>
+        <div id="contenido-1" class="hidden">
+          <p>Esta es la pestaña DASHBOARD</p>
         </div>
         <div id="contenido-2" class="hidden">
-          <p>Esta es la pestaña 2</p>
+          <p>Esta es la pestaña MY CRUISE</p>
         </div>
         <div id="contenido-3" >
           <table class="agents" border="1" width="70%" height="60%">
             <tr height="10%" width="90%">
               <td colspan="2">Agents
-                <button type="button" name="bts-all">All</button>
-                <button type="button" name="bts-physical">Physical</button>
-                <button type="button" name="bts-virtual">Virtual</button>
+                <input id="pestAll" type="radio" class="pestanaGrup2" name="bts-all" onclick="mostrarOcultar2('contenidoAll');">
+                  <label for="pestAll">All</label>
+                <input id="pestPhysical" type="radio" class="pestanaGrup2" name="bts-physical" onclick="mostrarOcultar2('contenidoPhysical');">
+                  <label for="pestPhysical">Physical</label>
+                <input id="pestVirtual" type="radio" class="pestanaGrup2" name="bts-virtual" onclick="mostrarOcultar2('contenidoVirtual');">
+                  <label for="pestVirtual">Virtual</label>
               </td>
             </tr>
             <tr height="90%" width="10%">
               <td class="td-physicall" width="80%">
-                <div id="Agents-display">
-
+                <div id="contenidoAll" class="hidden">
+                  <p>estas en All</p>
+                </div>
+                <div id="contenidoPhysical" >
+                  <div id="Agents-display">
+                  </div>
+                </div>
+                <div id="contenidoVirtual" class="hidden">
+                  <p>estas en Virtual</p>
                 </div>
               </td>
               <td class="td-side-bar" width="20%">
@@ -62,7 +71,7 @@
           </table>
         </div>
         <div id="contenido-4" class="hidden">
-          <p>Esta es la pestaña 4</p>
+          <p>Esta es la pestaña HELP</p>
         </div>
       </div>
     </div>
