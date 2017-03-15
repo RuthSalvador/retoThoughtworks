@@ -20,13 +20,13 @@
     </header>
     <h1>Cruise</h1>
     <div id="container">
-      <input id="pest1" type="radio" class="pestanaGrup" onclick="mostrarOcultar('contenido-1');">
+      <input id="pest1" type="radio" class="pestanaGrup" name="pestan" onclick="mostrarOcultar('contenido-1');">
         <label for="pest1">DASHBOARD</label>
-      <input id="pest2" type="radio" class="pestanaGrup" onclick="mostrarOcultar('contenido-2');">
+      <input id="pest2" type="radio" class="pestanaGrup" name="pestan"onclick="mostrarOcultar('contenido-2');">
         <label for="pest2">MY CRUISE</label>
-      <input id="pest3" type="radio" class="pestanaGrup" checked="checked" onclick="mostrarOcultar('contenido-3');">
+      <input id="pest3" type="radio" class="pestanaGrup" name="pestan" checked="checked" onclick="mostrarOcultar('contenido-3');">
         <label for="pest3">AGENTS</label>
-      <input id="pest4" type="radio" class="pestanaGrup" onclick="mostrarOcultar('contenido-4');">
+      <input id="pest4" type="radio" class="pestanaGrup" name="pestan" onclick="mostrarOcultar('contenido-4');">
         <label for="pest4">HELP</label>
       <div id="contenido">
         <div id="contenido-1" class="hidden">
@@ -39,11 +39,11 @@
           <table class="agents">
             <tr class="header-table">
               <td colspan="2">Agents
-                <input id="pestAll" type="radio" class="pestanaGrup2" name="bts-all" onclick="mostrarOcultar2('contenidoAll');">
+                <input id="pestAll" type="radio" class="pestanaGrup2" name="pestanAgent" onclick="mostrarOcultar2('contenidoAll');">
                   <label for="pestAll">All</label>
-                <input id="pestPhysical" type="radio" class="pestanaGrup2" name="bts-physical" onclick="mostrarOcultar2('contenidoPhysical');">
+                <input id="pestPhysical" type="radio" class="pestanaGrup2" name="pestanAgent" onclick="mostrarOcultar2('contenidoPhysical');">
                   <label for="pestPhysical">Physical</label>
-                <input id="pestVirtual" type="radio" class="pestanaGrup2" name="bts-virtual" onclick="mostrarOcultar2('contenidoVirtual');">
+                <input id="pestVirtual" type="radio" class="pestanaGrup2" name="pestanAgent" onclick="mostrarOcultar2('contenidoVirtual');">
                   <label for="pestVirtual">Virtual</label>
               </td>
             </tr>
@@ -73,7 +73,18 @@
           </table>
         </div>
         <div id="contenido-4" class="hidden">
-          <p>Esta es la pestaña HELP</p>
+          <form id="formularioHelp">
+            <h3>If you need support, please write us</h3>
+            <div>
+              <label for="nombreHelp">Name</label><br>
+                <input type="email" id="nombreHelp" placeholder="Please enter your name" autofocus=""><br><br>
+              <label for="emailHelp">Email</label><br>
+                <input type="email" id="emailHelp" class="form-control" placeholder="Please enter your email" autofocus=""><br><br>
+              <button class="btn btn-lg btn-primary btn-block submit-btn" type="submit" >Send</button>
+            </div>
+          </form>
+
+
         </div>
       </div>
     </div>
