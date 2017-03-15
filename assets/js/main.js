@@ -1,14 +1,16 @@
 //Objeto agent
-function Agent(type, status, web, ip, path) {
+function Agent(type, status, web, ip, path, agentId ) {
   this.type = type;
   this.status = status;
   this.web = web;
   this.ip = ip;
   this.path = path;
+  this.agentId = agentId;
   this.resources = [];
-  this.id = 0;
 
   this.addResources = function () {
+    var newAgentId = this.agentId;
+    console.log(newAgentId);
     var agentsDisplay = document.getElementById('Agents-display');
 
     var userResources = document.createElement('div');
@@ -38,11 +40,11 @@ function Agent(type, status, web, ip, path) {
     userResources.appendChild(tooltip);
 
       var specifyResources = document.createElement('span');
-      specifyResources.id = "specify-resources";
+      specifyResources.id = "specify-resources-"+newAgentId;
       specifyResources.innerHTML = " + Specify Resources";
       specifyResources.addEventListener('click', function (e) {
         e.preventDefault();
-        var tooltipBubble = document.getElementById('bubble');
+        var tooltipBubble = document.getElementById('bubble-'+newAgentId);
         tooltipBubble.classList.toggle("show");
       });
 
@@ -56,7 +58,7 @@ function Agent(type, status, web, ip, path) {
       tooltip.appendChild(resourcesSpan);
 
       var tooltipText = document.createElement('div');
-      tooltipText.id = "bubble";
+      tooltipText.id = "bubble-"+newAgentId;
       tooltipText.className = "tooltiptext";
       tooltip.appendChild(tooltipText);
 
@@ -67,7 +69,7 @@ function Agent(type, status, web, ip, path) {
         var inputResources = document.createElement('input');
         inputResources.className = "input";
         inputResources.type = "text";
-        inputResources.id = "input-resources";
+        inputResources.id = "input-resources-"+newAgentId;
         tooltipText.appendChild(inputResources);
 
         var salto2 = document.createElement('br');
@@ -76,16 +78,15 @@ function Agent(type, status, web, ip, path) {
         var btAddResources = document.createElement('button');
         btAddResources.type = "button";
         btAddResources.name = "bts-bubble";
-        btAddResources.id = "add-resources"
+        btAddResources.id = "add-resources-"+newAgentId;
         btAddResources.innerHTML = "Add Resources";
         var arrResources = this.resources;
         btAddResources.addEventListener('click', function (e) {
           e.preventDefault();
           var newInput = inputResources.value;
           var inputSplited = newInput.split(',');
-          console.log(arrResources);
           arrResources = arrResources.concat(inputSplited);
-          console.log (arrResources[0]);
+          console.log (arrResources);
 
           // agregando for para los inputs
           resourcesSpan.innerHTML = "";
@@ -116,12 +117,12 @@ function Agent(type, status, web, ip, path) {
         var btClose = document.createElement('button');
         btClose.type = "button";
         btClose.name = "bts-bubble";
-        btClose.id = "close-bubble"
+        btClose.id = "close-bubble-"+newAgentId;
         btClose.innerHTML = "Close";
 
         btClose.addEventListener('click', function (e) {
           e.preventDefault();
-          var tooltipOcultar = document.getElementById('bubble');
+          var tooltipOcultar = document.getElementById('bubble-'+newAgentId);
           //console.log(tooltipOcultar);
           tooltipOcultar.classList.toggle("show");
           inputResources.value = "";
@@ -131,10 +132,10 @@ function Agent(type, status, web, ip, path) {
   }
 }
 
-var agent = new Agent("physicall", "building", "bjstdmngbgr02.thougthworks.com", "192.168.1.2", "/var/lib/cruise-agent");
+var agent = new Agent("physicall", "building", "bjstdmngbgr02.thougthworks.com", "192.168.1.2", "/var/lib/cruise-agent", 0);
 agent.addResources();
 
-var agent2 = new Agent("physicall", "building", "bjstdmngbgr03.thougthworks.com", "192.168.1.2", "/var/lib/cruise-agent");
+var agent2 = new Agent("physicall", "building", "bjstdmngbgr03.thougthworks.com", "192.168.1.2", "/var/lib/cruise-agent", 1);
 agent2.addResources();
 
 function AgentsManager() {
