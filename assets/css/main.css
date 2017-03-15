@@ -4,9 +4,8 @@ body {
 
 table {
     border-collapse: collapse;
-    width:90%;
+    width:70%;
     height:60%;
-
 }
 
 table, th, td {
@@ -22,7 +21,7 @@ th, td {
     background-color: #606060;
     color: white;
     height:10%;
-    width: 90%;
+    
 }
 
 .td-physicall {
@@ -37,8 +36,8 @@ th, td {
 }
 
 #container {
-  margin: 0 auto;
-  padding: 21px;
+  justify-content: center;
+  align-items: center;
 }
 
 .tooltip {
@@ -59,14 +58,14 @@ th, td {
 
 .tooltip .tooltiptext {
   position: relative;
-  width: 510px;
-  height: 95px;
-  padding: 0px;
-  background: #b6e5e7;
+  width: 500px;
+  height: 70px;
+  padding: 10px;
+  background: #caecfa;
   -webkit-border-radius: 10px;
   -moz-border-radius: 10px;
   border-radius: 10px;
-  border: #814917 solid 4px;
+  border: #52341b solid 2px;
   visibility: hidden;
 }
 
@@ -74,28 +73,28 @@ th, td {
   content: '';
   position: absolute;
   border-style: solid;
-  border-width: 0 12px 22px;
-  border-color: #b6e5e7 transparent;
+  border-width: 0 22px 25px;
+  border-color: #caecfa transparent;
   display: block;
   width: 0;
   z-index: 1;
-  margin-left: -12px;
-  top: -22px;
-  left: 13%;
+  margin-left: -22px;
+  top: -25px;
+  left: 16%;
 }
 
 .tooltip .tooltiptext:before{
   content: '';
   position: absolute;
   border-style: solid;
-  border-width: 0 15px 25px;
-  border-color: #814917 transparent;
+  border-width: 0 23px 26px;
+  border-color: #52341b transparent;
   display: block;
   width: 0;
   z-index: 0;
-  margin-left: -15px;
-  top: -29px;
-  left: 13%;
+  margin-left: -23px;
+  top: -28px;
+  left: 16%;
 }
 
 .tooltip .show {
