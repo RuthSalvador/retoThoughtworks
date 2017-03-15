@@ -22,13 +22,18 @@ function Agent(type, status, web, ip, path, agentId ) {
     web.innerHTML = this.web;
     userResources.appendChild(web);
 
+    var status = document.createElement('span');
+    status.className = "status";
+    status.innerHTML = "&nbsp;&nbsp;&nbsp; | "+ this.status;
+    userResources.appendChild(status);
+
     var ip = document.createElement('span');
-    ip.className = "web";
-    ip.innerHTML = "&nbsp;&nbsp;&nbsp;&nbsp; | " + this.ip;
+    ip.className = "ip";
+    ip.innerHTML = "&nbsp; | " + this.ip;
     userResources.appendChild(ip);
 
     var path = document.createElement('span');
-    path.className = "web";
+    path.className = "path";
     path.innerHTML = " | " + this.path;
     userResources.appendChild(path);
 
@@ -122,7 +127,7 @@ function Agent(type, status, web, ip, path, agentId ) {
 
         btClose.addEventListener('click', function (e) {
           e.preventDefault();
-          var tooltipOcultar = document.getElementById('bubble-'+newAgentId);
+          var tooltipOcultar = document.getElementById('bubble-'+ newAgentId);
           //console.log(tooltipOcultar);
           tooltipOcultar.classList.toggle("show");
           inputResources.value = "";
@@ -132,11 +137,17 @@ function Agent(type, status, web, ip, path, agentId ) {
   }
 }
 
-var agent = new Agent("physicall", "building", "bjstdmngbgr02.thougthworks.com", "192.168.1.2", "/var/lib/cruise-agent", 0);
+var agent = new Agent("physicall", "idle", "bjstdmngbgr02.thougthworks.com", "192.168.1.2", "/var/lib/cruise-agent", 0);
 agent.addResources();
 
-var agent2 = new Agent("physicall", "building", "bjstdmngbgr03.thougthworks.com", "192.168.1.2", "/var/lib/cruise-agent", 1);
+var agent2 = new Agent("physicall", "building", "bjstdmngbgr03.thougthworks.com", "192.168.1.3", "/var/lib/cruise-agent", 1);
 agent2.addResources();
+
+var agent3 = new Agent("physicall", "building", "bjstdmngbgr04.thougthworks.com", "192.168.1.4", "/var/lib/cruise-agent", 2);
+agent3.addResources();
+
+var agent4 = new Agent("physicall", "idle", "bjstdmngbgr05.thougthworks.com", "192.168.1.5", "/var/lib/cruise-agent", 3);
+agent4.addResources();
 
 function AgentsManager() {
   this.all = [];
