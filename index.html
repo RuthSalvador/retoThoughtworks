@@ -73,21 +73,27 @@
           </table>
         </div>
         <div id="contenido-4" class="hidden">
-          <form id="formularioHelp">
-            <h3>If you need support, please write us</h3>
-            <div>
-              <label for="nombreHelp">Name</label><br>
-                <input type="email" id="nombreHelp" placeholder="Please enter your name" autofocus=""><br><br>
-              <label for="emailHelp">Email</label><br>
-                <input type="email" id="emailHelp" class="form-control" placeholder="Please enter your email" autofocus=""><br><br>
-              <button class="btn btn-lg btn-primary btn-block submit-btn" type="submit" >Send</button>
-            </div>
-          </form>
-
-
+          <table>
+            <tr>
+              <td>
+                <form id="formularioHelp" action="mailto:support@thoughtworks.com" method="post">
+                  <h3>If you need support, please write us <a href="mailto:support@thoughtworks.com">support@thoughtworks.com</a> or complete the form:</h3>
+                  <div>
+                    <label for="nombreHelp">Name:</label><br>
+                      <input type="text" id="nombreHelp" placeholder="Please enter your name" autofocus="" required><br><br>
+                    <label for="emailHelp">Email:</label><br>
+                      <input type="email" id="emailHelp" class="form-control" placeholder="Please enter your email" autofocus="" required><br><br>
+                    <label for="commentHelp">Your comment:</label><br>
+                      <input type="text" id="commentHelp" class="form-control" placeholder="Please enter your comment" autofocus="" style="width: 230px; height: 100px" required><br><br>
+                    <input type="submit" value="Send"><br><br>
+                  </div>
+                </form>
+              </td>
+            </tr>
+          </table>
         </div>
       </div>
-    </div>
+    </div><br>
     <footer>Realizado por <b>Ruth Salvador</b> y <b>Michelle More</b></footer>
     <script type="text/javascript" src="assets/js/pestanas.js"></script>
     <script type="text/javascript" src="assets/js/main.js"></script>
