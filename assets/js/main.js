@@ -1,4 +1,3 @@
-
 //Tabs de navegador
 var mostrarOcultar = function(divtexte) {
 
@@ -113,20 +112,21 @@ function Agent(type, status, web, ip, path) {
         btAddResources.name = "bts-bubble";
         btAddResources.id = "add-resources"
         btAddResources.innerHTML = "Add Resources";
-
+        var arrResources = this.resources;
         btAddResources.addEventListener('click', function (e) {
           e.preventDefault();
           var newInput = inputResources.value;
           var inputSplited = newInput.split(',');
-          agent.resources = agent.resources.concat(inputSplited);
-          console.log (agent.resources[0]);
+          console.log(arrResources);
+          arrResources = arrResources.concat(inputSplited);
+          console.log (arrResources[0]);
 
           // agregando for para los inputs
           resourcesSpan.innerHTML = "";
 
-          for (var i = 0; i < agent.resources.length; i++) {
+          for (var i = 0; i < arrResources.length; i++) {
             var label = document.createElement("label");
-            label.appendChild(document.createTextNode(agent.resources[i]))
+            label.appendChild(document.createTextNode(arrResources[i]))
             var newResource = document.createElement('input');
             newResource.className = 'newResource';
             newResource.type = 'button';
@@ -166,8 +166,10 @@ function Agent(type, status, web, ip, path) {
 }
 
 var agent = new Agent("physicall", "building", "bjstdmngbgr02.thougthworks.com", "192.168.1.2", "/var/lib/cruise-agent");
-var age1 =  new Agent("physicall", "building", "bjstdmngbgr03.thougthworks.com", "192.168.1.2", "/var/lib/cruise-agent");
 agent.addResources();
+
+var agent2 = new Agent("physicall", "building", "bjstdmngbgr03.thougthworks.com", "192.168.1.2", "/var/lib/cruise-agent");
+agent2.addResources();
 //console.log(agent);
 
 //Abrir tiptool
