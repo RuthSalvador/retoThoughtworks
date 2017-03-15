@@ -1,7 +1,60 @@
+body {
+  font-family: 'Open Sans', sans-serif;
+}
+
+table {
+    border-collapse: collapse;
+    width:90%;
+    height:60%;
+
+}
+
+table, th, td {
+    border: 2px solid black;
+}
+
+th, td {
+    padding: 10px;
+    text-align: left;
+}
+
+.header-table {
+    background-color: #606060;
+    color: white;
+    height:10%;
+    width: 90%;
+}
+
+.td-physicall {
+   width:80%;
+}
+
 /*Tooltip speech*/
 
+.td-side-bar {
+  width:20%;
+  font-size: 90%;
+}
+
+#container {
+  margin: 0 auto;
+  padding: 21px;
+}
+
 .tooltip {
-    
+
+}
+.user-resources {
+  border-radius: 10px;
+  border: 2px solid #606060;
+  padding: 15px;
+  width: 90%;
+  height: 40px;
+  margin: auto;
+  margin-top: 9px;
+  margin-bottom: 10px;
+  background-color: #c5f2b8;
+
 }
 
 .tooltip .tooltiptext {
@@ -59,6 +112,10 @@
 }
 
 .pestanaGrup {
+	visibility: hidden;
+}
+
+.pestanaGrup2 {
 	visibility: hidden;
 }
 
