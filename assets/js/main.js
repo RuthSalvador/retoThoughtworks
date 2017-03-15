@@ -59,8 +59,9 @@ function Agent(type, status, web, ip, path, agentId ) {
       resources.innerHTML = " | Resources:"
       tooltip.appendChild(resources);
 
-      var resourcesSpan = document.createElement('span');
-      tooltip.appendChild(resourcesSpan);
+      var resourcesDiv = document.createElement('div');
+      resourcesDiv.className = "div-spans";
+      tooltip.appendChild(resourcesDiv);
 
       var tooltipText = document.createElement('div');
       tooltipText.id = "bubble-"+newAgentId;
@@ -94,18 +95,23 @@ function Agent(type, status, web, ip, path, agentId ) {
           console.log (arrResources);
 
           // agregando for para los inputs
-          resourcesSpan.innerHTML = "";
+          resourcesDiv.innerHTML = "";
 
           for (var i = 0; i < arrResources.length; i++) {
+            var spanLabelBtn = document.createElement('span');
+            resourcesDiv.appendChild(spanLabelBtn);
+
             var label = document.createElement("label");
             label.appendChild(document.createTextNode(arrResources[i]))
+            label.className = "name-resource";
+
             var newResource = document.createElement('input');
             newResource.className = 'newResource';
             newResource.type = 'button';
             newResource.value = 'X';
 
-            label.appendChild(newResource);
-            resourcesSpan.appendChild(label);
+            spanLabelBtn.appendChild(label);
+            spanLabelBtn.appendChild(newResource);
 
             newResource.addEventListener('click', function(e){
               if (e.target.parentNode){

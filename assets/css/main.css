@@ -52,6 +52,10 @@ th, td {
   background-color: #c5f2b8;
 }
 
+.div-spans {
+  display: inline-block;
+}
+
 .tooltip .tooltiptext {
   position: relative;
   width: 500px;
