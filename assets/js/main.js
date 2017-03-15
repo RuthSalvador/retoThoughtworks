@@ -1,37 +1,3 @@
-//Tabs de navegador
-var mostrarOcultar = function(divtexte) {
-
-  var text1 = document.getElementById('contenido-1');
-  var text2 = document.getElementById('contenido-2');
-  var text3 = document.getElementById('contenido-3');
-  var text4 = document.getElementById('contenido-4');
-
-  if (divtexte == 'contenido-1') {
-    text1.style.display = 'block';
-    text2.style.display = 'none';
-    text3.style.display = 'none';
-    text4.style.display = 'none';
-  }
-  else if (divtexte == 'contenido-2') {
-    text1.style.display = 'none';
-    text2.style.display = 'block';
-    text3.style.display = 'none';
-    text4.style.display = 'none';
-  }
-  else if (divtexte == 'contenido-3') {
-    text1.style.display = 'none';
-    text2.style.display = 'none';
-    text3.style.display = 'block';
-    text4.style.display = 'none';
-  }
-  else if (divtexte == 'contenido-4') {
-    text1.style.display = 'none';
-    text2.style.display = 'none';
-    text3.style.display = 'none';
-    text4.style.display = 'block';
-  }
-}
-
 //Objeto agent
 function Agent(type, status, web, ip, path) {
   this.type = type;
@@ -170,41 +136,7 @@ agent.addResources();
 
 var agent2 = new Agent("physicall", "building", "bjstdmngbgr03.thougthworks.com", "192.168.1.2", "/var/lib/cruise-agent");
 agent2.addResources();
-//console.log(agent);
 
-//Abrir tiptool
-/*
-var openBubble = document.getElementById('specify-resources');
-openBubble.addEventListener('click', function(e) {
-  e.preventDefault();
-  var tooltipBubble = document.getElementById('bubble');
-  tooltipBubble.classList.toggle("show");
-});
-*/
-/*
-//Cerrar Tiptool
-var closeBubble = document.getElementById('close-bubble');
-closeBubble.addEventListener('click', function(e) {
-  e.preventDefault();
-  var tooltipOcultar = document.getElementById('bubble');
-  console.log(tooltipOcultar);
-  tooltipOcultar.classList.toggle("show");
-  document.getElementsByClassName('input')[0].value = "";
-});
-*/
-/*
-//Agregar resources
-var addResources = document.getElementById('add-resources');
-addResources.addEventListener('click', function(e) {
-  e.preventDefault();
-  var newInput = (document.getElementsByClassName('input')[0].value);
-  var inputSplited = newInput.split(',');
-  console.log(inputSplited);
-  agent.resources.push(inputSplited);
-  console.log(agent);
-});
-*/
-//Array de agents según type
 function AgentsManager() {
   this.all = [];
   this.physicall = [];
