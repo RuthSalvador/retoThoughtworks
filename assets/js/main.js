@@ -119,7 +119,8 @@ function Agent(type, status, web, ip, path, agentId ) {
             deleteResource.addEventListener('click', function(e){
               var index = e.target.id;
               console.log(index);
-              delete arrResources[index];
+              arrResources.splice(index, 1);
+              //delete arrResources[index];
               console.log(arrResources);
               if (e.target.parentNode){
                 e.target.parentNode.remove();
