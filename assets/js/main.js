@@ -54,11 +54,12 @@ function Agent(type, status, web, ip, path, agentId ) {
 
       var specifyResources = document.createElement('span');
       specifyResources.id = "specify-resources-"+newAgentId;
-      specifyResources.innerHTML = " + Specify Resources";
+      specifyResources.innerHTML = " + <u>Specify Resources</u>";
       specifyResources.addEventListener('click', function (e) {
         e.preventDefault();
         var tooltipBubble = document.getElementById('bubble-'+newAgentId);
         tooltipBubble.classList.toggle("show");
+        focusInput.focus();
       });
 
       tooltip.appendChild(specifyResources);
@@ -86,6 +87,7 @@ function Agent(type, status, web, ip, path, agentId ) {
         inputResources.size="67";
         inputResources.id = "input-resources-"+newAgentId;
         tooltipText.appendChild(inputResources);
+        var focusInput = document.getElementById(inputResources.id);
 
         var salto2 = document.createElement('br');
         tooltipText.appendChild(salto2);
@@ -102,6 +104,7 @@ function Agent(type, status, web, ip, path, agentId ) {
           var inputSplited = newInput.split(',');
           if(newInput == ""){
             alert ('Please, specify resources');
+            focusInput.focus();
           } else if (newInput != ""){
           arrResources = arrResources.concat(inputSplited);
           console.log (arrResources);
@@ -158,6 +161,7 @@ function Agent(type, status, web, ip, path, agentId ) {
           //console.log(tooltipOcultar);
           tooltipOcultar.classList.toggle("show");
           inputResources.value = "";
+
         });
 
         tooltipText.appendChild(btClose);
