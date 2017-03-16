@@ -92,8 +92,12 @@ function Agent(type, status, web, ip, path, agentId ) {
           e.preventDefault();
           var newInput = inputResources.value;
           var inputSplited = newInput.split(',');
+          if(newInput == ""){
+            alert ('Please, specify resources');
+          } else if (newInput != ""){
           arrResources = arrResources.concat(inputSplited);
           console.log (arrResources);
+          }
 
           // agregando for para los inputs
           resourcesDiv.innerHTML = "";
@@ -119,9 +123,10 @@ function Agent(type, status, web, ip, path, agentId ) {
             deleteResource.addEventListener('click', function(e){
               var index = e.target.id;
               console.log(index);
-              arrResources.splice(index, 1);
+              arrResources.splice(index, 2);
               //delete arrResources[index];
-              console.log(arrResources);
+             console.log(arrResources);
+
               if (e.target.parentNode){
                 e.target.parentNode.remove();
               }
