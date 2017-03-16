@@ -18,7 +18,7 @@ th, td {
 }
 
 .header-table {
-    background-color: #606060;
+    background-color: #61605A;
     color: white;
     height:10%;
 
@@ -59,18 +59,35 @@ th, td {
 
 .user-resources {
   border-radius: 10px;
-  border: 2px solid #606060;
+  border: 2px solid #61605A;
   padding: 15px;
   width: 90%;
   height: 40px;
   margin: auto;
   margin-top: 9px;
   margin-bottom: 10px;
-  background-color: #c5f2b8;
+  background-color: #C8E9B1;
 }
 
 .div-spans {
   display: inline-block;
+}
+
+.deleteResource {
+  background-color: #C8E9B1;
+  border: 2px solid #787878;
+  color: #787878;
+  padding-left: 4px;
+  padding-right: 4px;
+  padding-top: 0px;
+  padding-bottom: 1px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  border-radius: 6px;
+  font-weight: bold;
+  /*margin: 4px 2px;*/
+  cursor: pointer;
 }
 
 .tooltip{
@@ -82,12 +99,13 @@ th, td {
   width: 500px;
   height: 70px;
   padding: 10px;
-  background: #caecfa;
+  background: #E1EED1;
   -webkit-border-radius: 10px;
   -moz-border-radius: 10px;
   border-radius: 10px;
   border: #52341b solid 2px;
   visibility: hidden;
+  margin-top: 25px;
 }
 
 .tooltip .tooltiptext:after {
@@ -95,7 +113,7 @@ th, td {
   position: absolute;
   border-style: solid;
   border-width: 0 22px 25px;
-  border-color: #caecfa transparent;
+  border-color: #E1EED1 transparent;
   display: block;
   width: 0;
   z-index: 1;
@@ -121,6 +139,7 @@ th, td {
 .tooltip .show {
     visibility: visible;
 }
+
 /*
 .tooltip .notshow {
     visibility: hidden;
@@ -145,7 +164,7 @@ th, td {
 	color: #000000;  /* Color del texto de las pestañas */
 	cursor: pointer;
 	/*float: right 2px;*/ /* alinear pestañas a la derecha*/
-  border: #000000 solid 3px;
+  border: #000000 solid 2px;
 	text-align: center;
   padding: 0px 20px;
 

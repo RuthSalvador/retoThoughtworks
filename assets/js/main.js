@@ -75,6 +75,7 @@ function Agent(type, status, web, ip, path, agentId ) {
         var inputResources = document.createElement('input');
         inputResources.className = "input";
         inputResources.type = "text";
+        inputResources.size="67";
         inputResources.id = "input-resources-"+newAgentId;
         tooltipText.appendChild(inputResources);
 
@@ -105,9 +106,10 @@ function Agent(type, status, web, ip, path, agentId ) {
             label.appendChild(document.createTextNode(arrResources[i]))
             label.className = "name-resource";
 
-            var deleteResource = document.createElement('input');
+            var deleteResource = document.createElement('button');
             deleteResource.id = i;
             deleteResource.className = 'deleteResource';
+            deleteResource.innerHTML='x';
             deleteResource.type = 'button';
             deleteResource.value = 'x';
 
