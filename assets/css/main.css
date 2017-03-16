@@ -64,7 +64,12 @@ footer {
 }
 
 .div-spans{
-  font-size: 90%;
+  font-size: 95%;
+  display: inline-block;
+}
+
+.denyClass{
+  font-size: 100%;
 }
 
 .td-side-bar {
@@ -79,18 +84,16 @@ footer {
 nav {
   text-align: right;
   padding-right:10%;
-  font-size: 80%;
+  font-size: 95%;
 }
 
 #container {
   margin: 0 auto;
   /*align-items: center;*/
   width:80%;
-
-
 }
 
-.user-resources {
+.user-resources1 {
   border-radius: 10px;
   border: 2px solid #61605A;
   padding: 10px;
@@ -102,8 +105,16 @@ nav {
   background-color: #C8E9B1;
 }
 
-.div-spans {
-  display: inline-block;
+.user-resources2 {
+  border-radius: 10px;
+  border: 2px solid #61605A;
+  padding: 10px;
+  width: 95%;
+  height: auto;
+  margin: auto;
+  margin-top: 9px;
+  margin-bottom: 10px;
+  background-color: #fffbb9;
 }
 
 .deleteResource {

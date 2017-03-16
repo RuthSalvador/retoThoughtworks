@@ -7,6 +7,7 @@ function Agent(type, status, web, ip, path, agentId ) {
   this.path = path;
   this.agentId = agentId;
   this.resources = [];
+  this.deny = "";
 
   this.addResources = function () {
     var newAgentId = this.agentId;
@@ -14,7 +15,7 @@ function Agent(type, status, web, ip, path, agentId ) {
     var agentsDisplay = document.getElementById('Agents-display');
 
     var userResources = document.createElement('div');
-    userResources.className = "user-resources";
+    //userResources.className = "user-resources1";
     agentsDisplay.appendChild(userResources);
 
     var circle = document.createElement('div');
@@ -34,6 +35,11 @@ function Agent(type, status, web, ip, path, agentId ) {
     status.className = "status";
     status.innerHTML = "&nbsp;&nbsp;&nbsp; | "+ this.status;
     agentDatos.appendChild(status);
+    if (this.status == "idle"){
+      userResources.className = "user-resources1";
+    } else if (this.status == "building"){
+      userResources.className = "user-resources2";
+    }
 
     var ip = document.createElement('span');
     ip.className = "ip";
@@ -71,6 +77,18 @@ function Agent(type, status, web, ip, path, agentId ) {
       var resourcesDiv = document.createElement('div');
       resourcesDiv.className = "div-spans";
       tooltip.appendChild(resourcesDiv);
+
+
+      var deny = document.createElement('span');
+      deny.className = "denyClass";
+      tooltip.appendChild(deny);
+      if (this.status == "idle"){
+        deny.innerHTML = " / <u>Deny</u>";
+      } else if (this.status == "building"){
+        deny.innerHTML = "";
+      }
+
+
 
       var tooltipText = document.createElement('div');
       tooltipText.id = "bubble-"+newAgentId;
