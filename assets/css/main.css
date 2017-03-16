@@ -1,15 +1,19 @@
 body {
-  font-family: 'Open Sans', sans-serif;
+  font-family: 'Lato', sans-serif;
 }
 
-table {
+.agents {
     border-collapse: collapse;
-    width:100%;
+    width:auto;
     height:60%;
 }
 
+table {
+  margin-top: 5px;
+}
+
 table, th, td {
-    border: 2px solid black;
+    border: 2px solid #333333;
 }
 
 th, td {
@@ -17,15 +21,35 @@ th, td {
     text-align: left;
 }
 
+footer {
+  display: inline;
+  text-align: center;
+  margin-left: auto;
+  margin-right: auto;
+  font-size: 85%;
+}
+
 .header-table {
     background-color: #61605A;
     color: white;
     height:10%;
-
 }
 
 .td-physicall {
    width:80%;
+}
+
+.circle {
+  display: inline-block;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  background-color: #787878;
+  margin-right: 10px;
+}
+
+.agent-datos {
+  display: inline-block;
 }
 
 /*Tooltip speech*/
@@ -40,7 +64,7 @@ th, td {
 }
 
 .div-spans{
-  font-size: 80%;
+  font-size: 90%;
 }
 
 .td-side-bar {
@@ -49,20 +73,29 @@ th, td {
 }
 
 .title-tab {
-  align-items: center;
+
+}
+
+nav {
+  text-align: right;
+  padding-right:10%;
+  font-size: 80%;
 }
 
 #container {
-  justify-content: center;
-  align-items: center;
+  margin: 0 auto;
+  /*align-items: center;*/
+  width:80%;
+
+
 }
 
 .user-resources {
   border-radius: 10px;
   border: 2px solid #61605A;
-  padding: 15px;
-  width: 90%;
-  height: 40px;
+  padding: 10px;
+  width: 95%;
+  height: auto;
   margin: auto;
   margin-top: 9px;
   margin-bottom: 10px;
@@ -95,7 +128,7 @@ th, td {
 }
 
 .tooltip .tooltiptext {
-  position: relative;
+  position: absolute;
   width: 500px;
   height: 70px;
   padding: 10px;
@@ -105,7 +138,7 @@ th, td {
   border-radius: 10px;
   border: #52341b solid 2px;
   visibility: hidden;
-  margin-top: 25px;
+  margin-top: 22px;
 }
 
 .tooltip .tooltiptext:after {
@@ -151,14 +184,20 @@ th, td {
 }
 
 .pestanaGrup {
-	visibility: hidden;
+	display: none;
 }
 
 .pestanaGrup2 {
-	visibility: hidden;
+	display: none;
 }
 
-#container label {
+#pestanas1 {
+  display: block;
+  font-size: 90%;
+  font-weight: bold;
+}
+
+#pestanas1 label {
 	background: #f9f9f9;  /* Fondo de las pestañas */
 	border-radius: .55em .55em 0 0;
 	color: #000000;  /* Color del texto de las pestañas */
@@ -166,28 +205,56 @@ th, td {
 	/*float: right 2px;*/ /* alinear pestañas a la derecha*/
   border: #000000 solid 2px;
 	text-align: center;
-  padding: 0px 20px;
+  padding: 5px 10px;
 
 }
 
-#container input:hover + label {
+#pestanas1 input:hover + label {
 	background: #5e5c5c;  /* Fondo de las pestañas al pasar el cursor por encima */
 	color: #ffffff;  /* Color del texto de las pestañas al pasar el cursor por encima */
 
 }
 
-#container input:checked + label {
+#pestanas1 input:checked + label {
 	background: #606060;  /* Fondo de las pestañas al presionar */
 	color: #ffffff; /* Color de las pestañas al presionar */
 	position: relative;
 	z-index: 6;
+  border-bottom: #61605A solid 2px;
 }
 
 #contenido {
-	background: #cae778;  /* Fondo del contenido*/
-
-	  /* Alto del contenido */
-
 	width: 100%;
 	z-index: 5;
+}
+
+#pestanasAgent {
+  display: inline;
+  font-size: 76%;
+
+}
+
+#pestanasAgent label {
+	background: #9d9c9c;  /* Fondo de las pestañas */
+	border: 2px solid #333333;
+	color: #000000;  /* Color del texto de las pestañas */
+	cursor: pointer;
+	/*float: right 2px;*/ /* alinear pestañas a la derecha*/
+  border-radius: 18px;
+	text-align: center;
+  padding: 5px 10px;
+
+}
+
+#pestanasAgent input:hover + label {
+	background: #5e5c5c;  /* Fondo de las pestañas al pasar el cursor por encima */
+	color: #ffffff;  /* Color del texto de las pestañas al pasar el cursor por encima */
+
+}
+
+#pestanasAgent input:checked + label {
+	background: #d7d7d7;  /* Fondo de las pestañas al presionar */
+	color: #000000; /* Color de las pestañas al presionar */
+	position: relative;
+	z-index: 6;
 }

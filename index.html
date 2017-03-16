@@ -6,20 +6,19 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Reto Thoughtworks para Laboratoria realizado por Ruth Salvador y Michelle More</title>
     <link rel="stylesheet" type="text/css" href="assets/css/main.css" media="screen" />
-    <link href="https://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Lato" rel="stylesheet">
 
   </head>
   <body>
     <header>
-      <nav style="text-align:right">
-        <div class="">
+      <nav>
           <label id="helloMember">Signed in as <u>Member</u></label>
           <a href=""><u>Sign out</u></a>
-        </div>
       </nav>
     </header>
-    <h1>Cruise</h1>
     <div id="container">
+      <h1>Cruise</h1>
+      <div id="pestanas1">
       <input id="pest1" type="radio" class="pestanaGrup" name="pestan" onclick="mostrarOcultar('contenido-1');">
         <label for="pest1" class="title-tab">DASHBOARD</label>
       <input id="pest2" type="radio" class="pestanaGrup" name="pestan"onclick="mostrarOcultar('contenido-2');">
@@ -28,6 +27,7 @@
         <label for="pest3" class="title-tab">AGENTS</label>
       <input id="pest4" type="radio" class="pestanaGrup" name="pestan" onclick="mostrarOcultar('contenido-4');">
         <label for="pest4" class="title-tab">HELP</label>
+      </div>
       <div id="contenido">
         <div id="contenido-1" class="hidden">
           <p>Esta es la pestaña DASHBOARD</p>
@@ -39,12 +39,14 @@
           <table class="agents">
             <tr class="header-table">
               <td colspan="2">Agents
-                <input id="pestAll" type="radio" class="pestanaGrup2" name="pestanAgent" onclick="mostrarOcultar2('contenidoAll');">
-                  <label for="pestAll">All</label>
-                <input id="pestPhysical" type="radio" class="pestanaGrup2" name="pestanAgent" onclick="mostrarOcultar2('contenidoPhysical');">
-                  <label for="pestPhysical">Physical</label>
-                <input id="pestVirtual" type="radio" class="pestanaGrup2" name="pestanAgent" onclick="mostrarOcultar2('contenidoVirtual');">
-                  <label for="pestVirtual">Virtual</label>
+                <div id="pestanasAgent">
+                  <input id="pestAll" type="radio" class="pestanaGrup2" name="pestanAgent" onclick="mostrarOcultar2('contenidoAll');">
+                    <label for="pestAll">All</label>
+                  <input id="pestPhysical" type="radio" class="pestanaGrup2" name="pestanAgent"checked="checked" onclick="mostrarOcultar2('contenidoPhysical');">
+                    <label for="pestPhysical">Physical</label>
+                  <input id="pestVirtual" type="radio" class="pestanaGrup2" name="pestanAgent" onclick="mostrarOcultar2('contenidoVirtual');">
+                    <label for="pestVirtual">Virtual</label>
+                </div>
               </td>
             </tr>
             <tr >
@@ -61,11 +63,10 @@
                 </div>
               </td>
               <td class="td-side-bar">
-                <div>Summary<hr>
+                <div><b><p>Summary</p></b><hr>
                   <p>building 2</p>
-                  <br><br>
                 </div>
-                <div>History<hr>
+                <div><b><p>History</b></p><hr>
                   <p>bjstdmngbgr02/Acceptance_test</p>
                   <p>bjstdmngbgr02/Acceptance_test</p>
                   <p>bjstdmngbgr02/Acceptance_test</p>
@@ -103,7 +104,7 @@
         </div>
       </div>
     </div><br>
-    <footer>Realizado por <b>Ruth Salvador</b> y <b>Michelle More</b></footer>
+    <footer><p>Realizado por <b>Ruth Salvador</b> y <b>Michelle More</b></p></footer>
     <script type="text/javascript" src="assets/js/pestanas.js"></script>
     <script type="text/javascript" src="assets/js/main.js"></script>
   </body>

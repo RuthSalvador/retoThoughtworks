@@ -17,32 +17,40 @@ function Agent(type, status, web, ip, path, agentId ) {
     userResources.className = "user-resources";
     agentsDisplay.appendChild(userResources);
 
+    var circle = document.createElement('div');
+    circle.className = "circle";
+    userResources.appendChild(circle);
+
+    var agentDatos = document.createElement('div');
+    agentDatos.className = 'agent-datos';
+    userResources.appendChild(agentDatos);
+
     var web = document.createElement('span');
     web.className = "web";
     web.innerHTML = this.web;
-    userResources.appendChild(web);
+    agentDatos.appendChild(web);
 
     var status = document.createElement('span');
     status.className = "status";
     status.innerHTML = "&nbsp;&nbsp;&nbsp; | "+ this.status;
-    userResources.appendChild(status);
+    agentDatos.appendChild(status);
 
     var ip = document.createElement('span');
     ip.className = "ip";
     ip.innerHTML = "&nbsp; | " + this.ip;
-    userResources.appendChild(ip);
+    agentDatos.appendChild(ip);
 
     var path = document.createElement('span');
     path.className = "path";
     path.innerHTML = " | " + this.path;
-    userResources.appendChild(path);
+    agentDatos.appendChild(path);
 
     var salto = document.createElement('br');
-    userResources.appendChild(salto);
+    agentDatos.appendChild(salto);
 
     var tooltip = document.createElement('div');
     tooltip.className = "tooltip";
-    userResources.appendChild(tooltip);
+    agentDatos.appendChild(tooltip);
 
       var specifyResources = document.createElement('span');
       specifyResources.id = "specify-resources-"+newAgentId;
@@ -56,7 +64,7 @@ function Agent(type, status, web, ip, path, agentId ) {
       tooltip.appendChild(specifyResources);
 
       var resources = document.createElement('span');
-      resources.innerHTML = " | Resources:"
+      resources.innerHTML = " | Resources: &nbsp;"
       tooltip.appendChild(resources);
 
       var resourcesDiv = document.createElement('div');
@@ -119,8 +127,8 @@ function Agent(type, status, web, ip, path, agentId ) {
             deleteResource.addEventListener('click', function(e){
               var index = e.target.id;
               console.log(index);
-              arrResources.splice(index, 1);
-              //delete arrResources[index];
+              //arrResources.splice(index, 1);
+              delete arrResources[index];
               console.log(arrResources);
               if (e.target.parentNode){
                 e.target.parentNode.remove();
