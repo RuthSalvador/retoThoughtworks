@@ -60,6 +60,7 @@ function Agent(type, status, web, ip, path, agentId ) {
 
       var specifyResources = document.createElement('span');
       specifyResources.id = "specify-resources-"+newAgentId;
+      specifyResources.className = "specify-resources"
       specifyResources.innerHTML = " + <u>Specify Resources</u>";
       specifyResources.addEventListener('click', function (e) {
         e.preventDefault();
@@ -83,7 +84,7 @@ function Agent(type, status, web, ip, path, agentId ) {
       deny.className = "denyClass";
       tooltip.appendChild(deny);
       if (this.status == "idle"){
-        deny.innerHTML = " / <u>Deny</u>";
+        deny.innerHTML = " <i class='material-icons md-18'>&#xE14B;</i> <u>Deny</u>";
       } else if (this.status == "building"){
         deny.innerHTML = "";
       }
