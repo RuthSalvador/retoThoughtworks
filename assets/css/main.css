@@ -126,7 +126,8 @@ nav {
   margin: 0 auto;
   align-items: center;
   /*min-width: 880px;*/
-  max-width: 1260px;
+  /*width: 70%;*/
+  max-width: 960px;
   /*background-color: yellow;*/
 }
 
