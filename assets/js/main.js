@@ -33,7 +33,7 @@ function Agent(type, status, web, ip, path, agentId ) {
 
     var status = document.createElement('span');
     status.className = "status";
-    status.innerHTML = "&nbsp;&nbsp;&nbsp; | "+ this.status;
+    status.innerHTML = "| "+ this.status;
     agentDatos.appendChild(status);
     if (this.status == "idle"){
       userResources.className = "user-resources1";

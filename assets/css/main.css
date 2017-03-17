@@ -20,6 +20,7 @@ table {
 
 table, th, td {
     border: 2px solid #333333;
+
 }
 
 tr {
@@ -27,7 +28,7 @@ tr {
 }
 
 th, td {
-    padding: 10px;
+    padding: 15px;
     text-align: left;
 }
 
@@ -46,12 +47,11 @@ footer {
 }
 
 .td-physicall {
-  padding-top: 20px;
-   width:80%;
+  width:80%;
 }
 
 .circle {
-  display: inline-block;
+  float: left;
   width: 40px;
   height: 40px;
   border-radius: 50%;
@@ -60,24 +60,35 @@ footer {
 }
 
 .agent-datos {
-  display: inline-block;
+  display: inline;
   vertical-align: top;
+  padding-top: 2px;
+  height: auto;
 }
 
 /*Tooltip speech*/
 .web {
-  font-size: 90%;
+  font-size: 95%;
   font-weight: bold;
+  margin-right: 20px
 }
 
 .status, .ip, .path {
   font-size: 90%;
+  font-weight: bold;
 
 }
 
+.name-resource {
+  margin-right: 3px;
+}
+
 .div-spans{
-  font-size: 95%;
   display: inline-block;
+}
+
+.div-spans span {
+  margin-right: 10px;
 }
 
 .denyClass{
@@ -88,6 +99,8 @@ footer {
 .td-side-bar {
   width:20%;
   padding: 20px;
+  padding-top: 15px;
+  padding-bottom: 15px;
   vertical-align: top;
 }
 
@@ -119,16 +132,18 @@ nav {
 
 .display-agents {
   padding-bottom: 14px;
+  font-size: 100%;
 }
 
 .user-resources1 {
   border-radius: 10px;
   border: 2px solid #61605A;
   padding: 10px;
-  width: 95%;
+  width: 96%;
   height: auto;
   margin: auto;
-  margin-bottom: 10px;
+  margin-bottom: 15px;
+  padding-bottom: 13px;
   background-color: #C8E9B1;
 }
 
@@ -136,18 +151,18 @@ nav {
   border-radius: 10px;
   border: 2px solid #61605A;
   padding: 10px;
-  width: 95%;
+  width: 96%;
   height: auto;
   margin: auto;
-  margin-top: 9px;
-  margin-bottom: 10px;
+  padding-bottom: 13px;
+  margin-bottom: 15px;
   background-color: #fffbb9;
 }
 
 .deleteResource {
   background-color: #C8E9B1;
-  border: 2px solid #787878;
-  color: #787878;
+  border: 2px solid #9d9c9c;
+  color: #9d9c9c;
   padding-left: 4px;
   padding-right: 4px;
   padding-top: 0px;
@@ -155,7 +170,7 @@ nav {
   text-align: center;
   text-decoration: none;
   display: inline-block;
-  border-radius: 6px;
+  border-radius: 6.5px;
   font-weight: bold;
   /*margin: 4px 2px;*/
   cursor: pointer;
@@ -171,13 +186,15 @@ nav {
 }
 
 .tooltip{
-  font-size: 75%;
+  font-size: 80%;
+  margin-top: 3px;
+  display: inline;
 }
 
 .tooltip .tooltiptext {
   position: absolute;
   width: 500px;
-  height: 70px;
+  height: 73px;
   padding: 10px;
   background: #E1EED1;
   -webkit-border-radius: 10px;
@@ -185,7 +202,7 @@ nav {
   border-radius: 10px;
   border: #52341b solid 2px;
   visibility: hidden;
-  margin-top: 22px;
+  margin-top: 30px;
 }
 
 .tooltip .tooltiptext:after {
@@ -217,9 +234,30 @@ nav {
 }
 
 .tooltip .show {
-    visibility: visible;
+  visibility: visible;
 }
 
+.tooltiptext button {
+  margin-right: 10px;
+  border: 2px solid #4a4a4a;
+  color: #000000;
+  background-color: #e9e9e9;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  border-radius: 12px;
+  padding: 3px 8px 3px 8px;
+  cursor: pointer;
+}
+
+.tooltiptext button:hover {
+  background-color: #ffffff;
+}
+
+.input {
+  margin-bottom: 7px;
+  margin-top: 7px;
+}
 /*
 .tooltip .notshow {
     visibility: hidden;
@@ -240,10 +278,11 @@ nav {
 
 #pestanas1 {
   display: block;
-  font-size: 90%;
+  font-size: 100%;
   font-weight: bold;
   float: right;
   margin-bottom: 5px;
+
 }
 
 #pestanas1 label {
@@ -258,11 +297,6 @@ nav {
 
 }
 
-#pestanas1 input:hover + label {
-	background: #5e5c5c;  /* Fondo de las pestañas al pasar el cursor por encima */
-	color: #ffffff;  /* Color del texto de las pestañas al pasar el cursor por encima */
-
-}
 
 #pestanas1 input:checked + label {
 	background: #606060;  /* Fondo de las pestañas al presionar */
@@ -297,9 +331,9 @@ nav {
 
 }
 
-#pestanasAgent input:hover + label {
-	background: #5e5c5c;  /* Fondo de las pestañas al pasar el cursor por encima */
-	color: #ffffff;  /* Color del texto de las pestañas al pasar el cursor por encima */
+#pestanasAgent input:hover + label:hover {
+	background: #c8c8c8;  /* Fondo de las pestañas al pasar el cursor por encima */
+	color: #000000;  /* Color del texto de las pestañas al pasar el cursor por encima */
 
 }
 
