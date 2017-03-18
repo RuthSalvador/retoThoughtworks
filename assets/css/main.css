@@ -2,20 +2,25 @@ body {
   font-family: 'Lato', sans-serif;
 }
 
+nav {
+  text-align: right;
+  font-size: 80%;
+}
+
+nav label {
+  margin-right: 10px;
+}
+
 h1 {
   margin-bottom: 0px;
   margin-top: 0px;
 }
 
-.agents {
-    border-collapse: collapse;
-    width:100%;
-
-    /*height:60%;*/
-}
-
 table {
   margin: 0 auto;
+  border-collapse: collapse;
+  width:100%;
+  height: 500px
 }
 
 table, th, td {
@@ -112,22 +117,12 @@ footer {
   font-size: 75%;
 }
 
-.title-tab {
 
-}
-
-nav {
-  text-align: right;
-  margin-right:2.5%;
-  font-size: 80%;
-}
 
 #container {
   margin: 0 auto;
   align-items: center;
-  min-width: 700px;
-  /*width: 70%;*/
-  max-width: 70%;
+  max-width: 960px;
   /*background-color: yellow;*/
 }
 
@@ -195,7 +190,7 @@ nav {
 .tooltip .tooltiptext {
   position: absolute;
   width: 500px;
-  height: 73px;
+  height: 75px;
   padding: 10px;
   background: #E1EED1;
   -webkit-border-radius: 10px;
@@ -344,6 +339,8 @@ nav {
 	position: relative;
 	z-index: 6;
 }
+
+/*Icons*/
 
 @font-face {
   font-family: 'Material Icons';

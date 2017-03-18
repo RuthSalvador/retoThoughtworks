@@ -199,8 +199,10 @@ agent3.addResources();
 var agent4 = new Agent("physicall", "idle", "bjstdmngbgr05.thougthworks.com", "192.168.1.5", "/var/lib/cruise-agent", 3);
 agent4.addResources();
 
-function AgentsManager() {
+function AgentManager() {
   this.all = [];
   this.physicall = [];
   this.virtual = [];
+
+  
 }

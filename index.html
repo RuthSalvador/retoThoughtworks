@@ -11,30 +11,38 @@
 
   </head>
   <body>
-    <header>
-      <nav>
-          <label id="helloMember">Signed in as <u>Member</u>&nbsp;&nbsp;&nbsp;&nbsp;</label>
-          <a href=""><i class="material-icons md-18">&#xE5C8;</i><u>Sign out</u></a>
-      </nav>
-    </header>
     <div id="container">
+      <header>
+        <nav>
+            <label id="helloMember">Signed in as <u>Member</u></label>
+            <a href=""><i class="material-icons md-18">&#xE5C8;</i><u>Sign out</u></a>
+        </nav>
+      </header>
       <h1>Cruise</h1>
       <div id="pestanas1">
-      <input id="pest1" type="radio" class="pestanaGrup" name="pestan" onclick="mostrarOcultar('contenido-1');">
-        <label for="pest1" class="title-tab">DASHBOARD</label>
-      <input id="pest2" type="radio" class="pestanaGrup" name="pestan"onclick="mostrarOcultar('contenido-2');">
-        <label for="pest2" class="title-tab">MY CRUISE</label>
-      <input id="pest3" type="radio" class="pestanaGrup" name="pestan" checked="checked" onclick="mostrarOcultar('contenido-3');">
-        <label for="pest3" class="title-tab">AGENTS</label>
-      <input id="pest4" type="radio" class="pestanaGrup" name="pestan" onclick="mostrarOcultar('contenido-4');">
-        <label for="pest4" class="title-tab">HELP</label>
+        <input id="pest1" type="radio" class="pestanaGrup" name="pestan" onclick="mostrarOcultar('contenido-1');">
+          <label for="pest1" class="title-tab">DASHBOARD</label>
+        <input id="pest2" type="radio" class="pestanaGrup" name="pestan"onclick="mostrarOcultar('contenido-2');">
+          <label for="pest2" class="title-tab">MY CRUISE</label>
+        <input id="pest3" type="radio" class="pestanaGrup" name="pestan" checked="checked" onclick="mostrarOcultar('contenido-3');">
+          <label for="pest3" class="title-tab">AGENTS</label>
+        <input id="pest4" type="radio" class="pestanaGrup" name="pestan" onclick="mostrarOcultar('contenido-4');">
+          <label for="pest4" class="title-tab">HELP</label>
       </div>
       <div id="contenido">
         <div id="contenido-1" class="hidden">
-          <p>Esta es la pestaña DASHBOARD</p>
+          <table>
+            <tr>
+              <td><p>Welcome to DASHBOARD!</p></td>
+            </tr>
+          </table>
         </div>
         <div id="contenido-2" class="hidden">
-          <p>Esta es la pestaña MY CRUISE</p>
+          <table>
+            <tr>
+              <td><p>Welcome to MY CRUISE!</p></td>
+            </tr>
+          </table>
         </div>
         <div id="contenido-3" >
           <table class="agents">
@@ -53,19 +61,19 @@
             <tr >
               <td class="td-physicall">
                 <div id="contenidoAll" class="hidden">
-                  <p>estas en All</p>
+                    <p>This is All</p>
                 </div>
                 <div id="contenidoPhysical" >
-                  <div id="Agents-display">
-                  </div>
+                  <div id="Agents-display"></div>
                 </div>
                 <div id="contenidoVirtual" class="hidden">
-                  <p>estas en Virtual</p>
+                    <p>This is Virtual</p>
                 </div>
               </td>
               <td class="td-side-bar">
                 <div><b>Summary</b><hr>
-                  <p>building 2</p>
+                  <p>Building <span class="building">2</span></p>
+                  <p>Idle <span class="idle">2</span></p>
                 </div>
                 <div><b>History</b><hr>
                   <p>bjstdmngbgr02/Acceptance_test</p>
@@ -88,7 +96,7 @@
             <tr>
               <td>
                 <form id="formularioHelp" action="mailto:support@thoughtworks.com" method="post">
-                  <h3>If you need support, please write us <a href="mailto:support@thoughtworks.com">support@thoughtworks.com</a> or complete the form:</h3>
+                  <h4>If you need support, please write us <a href="mailto:support@thoughtworks.com">support@thoughtworks.com</a> or complete the form:</h4>
                   <div>
                     <label for="nombreHelp">Name:</label><br>
                       <input type="text" id="nombreHelp" placeholder="Please enter your name" autofocus="" required><br><br>
