@@ -143,37 +143,38 @@ function Agent(type, status, web, ip, path, agentId) {
           resourcesDiv.innerHTML = "";
 
           for (var i = 0; i < arrResources.length; i++) {
-            var spanLabelBtn = document.createElement('span');
-            resourcesDiv.appendChild(spanLabelBtn);
 
-            var label = document.createElement("label");
-            label.appendChild(document.createTextNode(arrResources[i]))
-            label.className = "name-resource";
+            if (arrResources[i] != undefined) {
+              var spanLabelBtn = document.createElement('span');
+              resourcesDiv.appendChild(spanLabelBtn);
+              var label = document.createElement("label");
+              label.appendChild(document.createTextNode(arrResources[i]))
+              label.className = "name-resource";
 
-            var deleteResource = document.createElement('button');
-            deleteResource.id = i;
-            deleteResource.className = 'deleteResource';
-            deleteResource.innerHTML='x';
-            deleteResource.type = 'button';
-            deleteResource.value = 'x';
+              var deleteResource = document.createElement('button');
+              deleteResource.id = i;
+              deleteResource.className = 'deleteResource';
+              deleteResource.innerHTML='x';
+              deleteResource.type = 'button';
+              deleteResource.value = 'x';
 
-            spanLabelBtn.appendChild(label);
-            spanLabelBtn.appendChild(deleteResource);
+              spanLabelBtn.appendChild(label);
+              spanLabelBtn.appendChild(deleteResource);
+              deleteResource.addEventListener('click', function(e){
+                var index = e.target.id;
+                console.log(index);
+                //arrResources.splice(index, 2);
+                delete arrResources[index];
+                //arrResources = arrResources.filter(Boolean);
+                console.log(arrResources);
 
-            deleteResource.addEventListener('click', function(e){
-              var index = e.target.id;
-              console.log(index);
-              arrResources.splice(index, 2);
-              //delete arrResources[index];
-             console.log(arrResources);
+                if (e.target.parentNode){
+                  e.target.parentNode.remove();
+                }
 
-              if (e.target.parentNode){
-                e.target.parentNode.remove();
-              }
-
-            });
+              });
+            }
           }
-
         });
 
         tooltipText.appendChild(btAddResources);
@@ -189,6 +190,7 @@ function Agent(type, status, web, ip, path, agentId) {
           var tooltipOcultar = document.getElementById('bubble-'+ newAgentId);
           tooltipOcultar.classList.toggle("show");
           inputResources.value = "";
+          console.log(arrResources);
 
         });
 
