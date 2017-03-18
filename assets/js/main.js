@@ -1,5 +1,5 @@
 //Objeto agent
-function Agent(type, status, web, ip, path, agentId ) {
+function Agent(type, status, web, ip, path, agentId) {
   this.type = type;
   this.status = status;
   this.web = web;
@@ -15,7 +15,6 @@ function Agent(type, status, web, ip, path, agentId ) {
     var agentsDisplay = document.getElementById('Agents-display');
 
     var userResources = document.createElement('div');
-    //userResources.className = "user-resources1";
     agentsDisplay.appendChild(userResources);
 
     var circle = document.createElement('div');
@@ -79,17 +78,27 @@ function Agent(type, status, web, ip, path, agentId ) {
       resourcesDiv.className = "div-spans";
       tooltip.appendChild(resourcesDiv);
 
-
       var deny = document.createElement('span');
       deny.className = "denyClass";
       tooltip.appendChild(deny);
+      //Contador de status
+      var countingIdle = 1;
+      var countingBuilding = 1;
+
       if (this.status == "idle"){
         deny.innerHTML = " <i class='material-icons md-18'>&#xE14B;</i> <u>Deny</u>";
+        //Imprimir status idle
+        var printIdle = document.getElementById('idle');
+        countingIdle++;
+        printIdle.innerHTML = countingIdle;
+
       } else if (this.status == "building"){
         deny.innerHTML = "";
+        //Imprimir status building
+        var printBuilding = document.getElementById('building');
+        countingBuilding++;
+        printBuilding.innerHTML = countingBuilding;
       }
-
-
 
       var tooltipText = document.createElement('div');
       tooltipText.id = "bubble-"+newAgentId;
@@ -121,6 +130,7 @@ function Agent(type, status, web, ip, path, agentId ) {
           e.preventDefault();
           var newInput = inputResources.value;
           var inputSplited = newInput.split(',');
+
           if(newInput == ""){
             alert ('Please, specify resources');
             focusInput.focus();
@@ -177,7 +187,6 @@ function Agent(type, status, web, ip, path, agentId ) {
         btClose.addEventListener('click', function (e) {
           e.preventDefault();
           var tooltipOcultar = document.getElementById('bubble-'+ newAgentId);
-          //console.log(tooltipOcultar);
           tooltipOcultar.classList.toggle("show");
           inputResources.value = "";
 
@@ -199,10 +208,8 @@ agent3.addResources();
 var agent4 = new Agent("physicall", "idle", "bjstdmngbgr05.thougthworks.com", "192.168.1.5", "/var/lib/cruise-agent", 3);
 agent4.addResources();
 
-function AgentManager() {
-  this.all = [];
-  this.physicall = [];
-  this.virtual = [];
-
-  
+var AgentManager = {
+  all : [],
+  physicall : [agent, agent2, agent3, agent4],
+  virtual : [],
 }
