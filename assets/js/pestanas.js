@@ -1,8 +1,8 @@
 //Pestañas DASHBOARD, MY CRUISE, AGENTS y HELP
-var pestanasGeneral = document.getElementsByClassName('tabs-general');
+var tabsGeneral = document.getElementsByClassName('tabs-general');
 
-for (var i = 0; i < pestanasGeneral.length; i++) {
-  pestanasGeneral[i].addEventListener('click',function(e) {
+for (var i = 0; i < tabsGeneral.length; i++) {
+  tabsGeneral[i].addEventListener('click',function(e) {
     e.preventDefault();
     var currentTab = e.target.id;
     var dashboard = document.getElementById('dashboard-div');

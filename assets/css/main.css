@@ -263,11 +263,11 @@ footer {
 .hidden {
   display: none;
 }
-
+/*
 .tabs-general {
 	display: none;
 }
-
+*/
 .tabs-agent {
 	display: none;
 }
