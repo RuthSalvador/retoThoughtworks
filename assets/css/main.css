@@ -264,15 +264,15 @@ footer {
   display: none;
 }
 
-.pestanaGrup {
+.tabs-general {
 	display: none;
 }
 
-.pestanaGrup2 {
+.tabs-agent {
 	display: none;
 }
 
-#pestanas1 {
+#tabs-general {
   display: block;
   font-size: 100%;
   font-weight: bold;
@@ -281,7 +281,7 @@ footer {
 
 }
 
-#pestanas1 label {
+#tabs-general label {
 	background: #ffffff;  /* Fondo de las pestañas */
 	border-radius: .55em .55em 0 0;
 	color: #000000;  /* Color del texto de las pestañas */
@@ -294,7 +294,7 @@ footer {
 }
 
 
-#pestanas1 input:checked + label {
+#tabs-general input:checked + label {
 	background: #606060;  /* Fondo de las pestañas al presionar */
 	color: #ffffff; /* Color de las pestañas al presionar */
 	position: relative;
@@ -308,14 +308,14 @@ footer {
   /*margin-top: 5px;*/
 }
 
-#pestanasAgent {
+#tabs-agent {
   display: inline;
   font-size: 76%;
   margin-left: 10px;
 
 }
 
-#pestanasAgent label {
+#tabs-agent label {
 	background: #9d9c9c;  /* Fondo de las pestañas */
 	border: 2px solid #333333;
 	color: #000000;  /* Color del texto de las pestañas */
@@ -327,13 +327,13 @@ footer {
 
 }
 
-#pestanasAgent input:hover + label:hover {
+#tabs-agent input:hover + label:hover {
 	background: #c8c8c8;  /* Fondo de las pestañas al pasar el cursor por encima */
 	color: #000000;  /* Color del texto de las pestañas al pasar el cursor por encima */
 
 }
 
-#pestanasAgent input:checked + label {
+#tabs-agent input:checked + label {
 	background: #d7d7d7;  /* Fondo de las pestañas al presionar */
 	color: #000000; /* Color de las pestañas al presionar */
 	position: relative;

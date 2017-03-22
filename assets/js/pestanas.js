@@ -1,58 +1,73 @@
 //Pestañas DASHBOARD, MY CRUISE, AGENTS y HELP
-var mostrarOcultar = function(divtexte) {
+var pestanasGeneral = document.getElementsByClassName('tabs-general');
 
-  var text1 = document.getElementById('contenido-1');
-  var text2 = document.getElementById('contenido-2');
-  var text3 = document.getElementById('contenido-3');
-  var text4 = document.getElementById('contenido-4');
+for (var i = 0; i < pestanasGeneral.length; i++) {
+  pestanasGeneral[i].addEventListener('click',function(e) {
+    e.preventDefault();
+    var currentTab = e.target.id;
+    var dashboard = document.getElementById('dashboard-div');
+    var cruise = document.getElementById('cruise-div');
+    var agents = document.getElementById('agents-div');
+    var help = document.getElementById('help-div');
 
-  if (divtexte == 'contenido-1') {
-    text1.style.display = 'block';
-    text2.style.display = 'none';
-    text3.style.display = 'none';
-    text4.style.display = 'none';
-  }
-  else if (divtexte == 'contenido-2') {
-    text1.style.display = 'none';
-    text2.style.display = 'block';
-    text3.style.display = 'none';
-    text4.style.display = 'none';
-  }
-  else if (divtexte == 'contenido-3') {
-    text1.style.display = 'none';
-    text2.style.display = 'none';
-    text3.style.display = 'block';
-    text4.style.display = 'none';
-  }
-  else if (divtexte == 'contenido-4') {
-    text1.style.display = 'none';
-    text2.style.display = 'none';
-    text3.style.display = 'none';
-    text4.style.display = 'block';
-  }
+    function show(tabShown) {
+      tabShown.style.display = 'block';
+    }
+    function hide(tabHidden1, tabHidden2, tabHidden3) {
+      tabHidden1.style.display = 'none';
+      tabHidden2.style.display = 'none';
+      tabHidden3.style.display = 'none';
+    }
+
+    if (currentTab == 'dashboard') {
+    show(dashboard);
+    hide(cruise, agents, help);
+    }
+    if (currentTab == 'cruise') {
+    show(cruise);
+    hide(dashboard, agents, help);
+    }
+    if (currentTab == 'agents') {
+    show(agents);
+    hide(dashboard, cruise, help);
+    }
+    if (currentTab == 'help') {
+    show(help);
+    hide(dashboard, agents, cruise);
+    }
+  });
 }
 
 
-//Pestañas ALL, PHYSICAL y VIRTUAL
-var mostrarOcultar2 = function(muestrate) {
+var tabsAgent = document.getElementsByClassName('tabs-agent');
 
-  var contenidoAll = document.getElementById('contenidoAll');
-  var contenidoPhysical = document.getElementById('contenidoPhysical');
-  var contenidoVirtual = document.getElementById('contenidoVirtual');
+  for (var i = 0; i < tabsAgent.length; i++) {
+    tabsAgent[i].addEventListener('click',function(e) {
+      e.preventDefault();
+      var currentTabx = e.target.id;
+      var all = document.getElementById('all-div');
+      var physical = document.getElementById('physical-div');
+      var virtual = document.getElementById('virtual-div');
 
-  if (muestrate == 'contenidoAll') {
-    contenidoAll.style.display = 'block';
-    contenidoPhysical.style.display = 'none';
-    contenidoVirtual.style.display = 'none';
+      function show(tabShown) {
+        tabShown.style.display = 'block';
+      }
+      function hide(tabHidden1, tabHidden2) {
+        tabHidden1.style.display = 'none';
+        tabHidden2.style.display = 'none';
+      }
+
+      if (currentTabx == 'all') {
+      show(all);
+      hide(physical, virtual);
+      }
+      if (currentTabx == 'physical') {
+      show(physical);
+      hide(all, virtual);
+      }
+      if (currentTabx == 'virtual') {
+      show(virtual);
+      hide(all, physical);
+      }
+    });
   }
-  else if (muestrate == 'contenidoPhysical') {
-    contenidoAll.style.display = 'none';
-    contenidoPhysical.style.display = 'block';
-    contenidoVirtual.style.display = 'none';
-  }
-  else if (muestrate == 'contenidoVirtual') {
-    contenidoAll.style.display = 'none';
-    contenidoPhysical.style.display = 'none';
-    contenidoVirtual.style.display = 'block';
-  }
-}

@@ -19,54 +19,54 @@
         </nav>
       </header>
       <h1>Cruise</h1>
-      <div id="pestanas1">
-        <input id="pest1" type="radio" class="pestanaGrup" name="pestan" onclick="mostrarOcultar('contenido-1');">
-          <label for="pest1" class="title-tab">DASHBOARD</label>
-        <input id="pest2" type="radio" class="pestanaGrup" name="pestan"onclick="mostrarOcultar('contenido-2');">
-          <label for="pest2" class="title-tab">MY CRUISE</label>
-        <input id="pest3" type="radio" class="pestanaGrup" name="pestan" checked="checked" onclick="mostrarOcultar('contenido-3');">
-          <label for="pest3" class="title-tab">AGENTS</label>
-        <input id="pest4" type="radio" class="pestanaGrup" name="pestan" onclick="mostrarOcultar('contenido-4');">
-          <label for="pest4" class="title-tab">HELP</label>
+      <div id="tabs-general">
+        <input id="dashboard" type="radio" class="tabs-general" >
+          <label for="dashboard" class="title-tab">DASHBOARD</label>
+        <input id="cruise" type="radio" class="tabs-general">
+          <label for="cruise" class="title-tab">MY CRUISE</label>
+        <input id="agents" type="radio" class="tabs-general" checked="checked" >
+          <label for="agents" class="title-tab">AGENTS</label>
+        <input id="help" type="radio" class="tabs-general" >
+          <label for="help" class="title-tab">HELP</label>
       </div>
       <div id="contenido">
-        <div id="contenido-1" class="hidden">
+        <div id="dashboard-div" class="hidden">
           <table>
             <tr>
               <td><p>Welcome to DASHBOARD!</p></td>
             </tr>
           </table>
         </div>
-        <div id="contenido-2" class="hidden">
+        <div id="cruise-div" class="hidden">
           <table>
             <tr>
               <td><p>Welcome to MY CRUISE!</p></td>
             </tr>
           </table>
         </div>
-        <div id="contenido-3" >
+        <div id="agents-div" >
           <table class="agents">
             <tr class="header-table">
               <td colspan="2" class="display-agents">Agents
-                <div id="pestanasAgent">
-                  <input id="pestAll" type="radio" class="pestanaGrup2" name="pestanAgent" onclick="mostrarOcultar2('contenidoAll');">
-                    <label for="pestAll">All</label>
-                  <input id="pestPhysical" type="radio" class="pestanaGrup2" name="pestanAgent"checked="checked" onclick="mostrarOcultar2('contenidoPhysical');">
-                    <label for="pestPhysical">Physical</label>
-                  <input id="pestVirtual" type="radio" class="pestanaGrup2" name="pestanAgent" onclick="mostrarOcultar2('contenidoVirtual');">
-                    <label for="pestVirtual">Virtual</label>
+                <div id="tabs-agent">
+                  <input id="all" type="radio" class="tabs-agent" >
+                    <label for="all">All</label>
+                  <input id="physical" type="radio" class="tabs-agent" checked="checked" >
+                    <label for="physical">Physical</label>
+                  <input id="virtual" type="radio" class="tabs-agent">
+                    <label for="virtual">Virtual</label>
                 </div>
               </td>
             </tr>
             <tr >
               <td class="td-physicall">
-                <div id="contenidoAll" class="hidden">
+                <div id="all-div" class="hidden">
                     <p>This is All</p>
                 </div>
-                <div id="contenidoPhysical" >
+                <div id="physical-div" >
                   <div id="Agents-display"></div>
                 </div>
-                <div id="contenidoVirtual" class="hidden">
+                <div id="virtual-div" class="hidden">
                     <p>This is Virtual</p>
                 </div>
               </td>
@@ -91,7 +91,7 @@
             </tr>
           </table>
         </div>
-        <div id="contenido-4" class="hidden">
+        <div id="help-div" class="hidden">
           <table>
             <tr>
               <td>
