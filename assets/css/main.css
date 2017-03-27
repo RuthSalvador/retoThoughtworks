@@ -156,7 +156,7 @@ footer {
 }
 
 .deleteResource {
-  background-color: #C8E9B1;
+  background-color: Transparent;
   border: 2px solid #9d9c9c;
   color: #9d9c9c;
   padding-left: 4px;
@@ -338,6 +338,52 @@ footer {
 	color: #000000; /* Color de las pestañas al presionar */
 	position: relative;
 	z-index: 6;
+}
+
+button:focus {
+  outline:0;
+}
+
+#help-div td{
+  text-align: center;
+}
+
+#help-div a{
+  color: #1249a7;
+  text-decoration: none;
+}
+
+#help-div a:hover {
+  color: #1563da;
+}
+
+#help-div input[type=submit] {
+  margin-right: 10px;
+  border: 2px solid #1249a7;
+  color: #ffffff;
+  background-color: #1249a7;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  border-radius: 12px;
+  padding: 7px 30px 7px 30px;
+  cursor: pointer;
+  font-weight: bold;
+}
+
+#help-div input[type=submit]:hover {
+    background-color: #1563da;
+}
+
+.form-control {
+    width: 50%;
+    padding: 12px 20px;
+    margin: 8px 0;
+    display: inline-block;
+    border: 1px solid #c3bfbf;
+    background-color: #dedede;
+    border-radius: 4px;
+    box-sizing: border-box;
 }
 
 /*Icons*/
