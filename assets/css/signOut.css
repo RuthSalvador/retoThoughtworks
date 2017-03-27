@@ -1,0 +1,67 @@
+body {
+  font-family: 'Merriweather Sans', sans-serif;
+}
+
+nav {
+  text-align: right;
+  margin-right: 10px;
+}
+
+#contenidoBack {
+  margin: 0 auto;
+  align-items: center;
+  max-width: 960px;
+	z-index: 5;
+}
+
+#createdBy{
+  text-align: center;
+}
+
+table {
+  margin: 0 auto;
+  border-collapse: collapse;
+  width:100%;
+  height: 200px;
+}
+img{
+  width: 30%;
+}
+
+h1{
+  font-size: 27px;
+  padding-left: 12px;
+}
+
+table, th, td {
+    border: 2px solid #333333;
+}
+
+tr {
+  vertical-align: top;
+}
+
+footer {
+  margin-left: auto;
+  margin-right: auto;
+  font-size: 85%;
+  color: #ffffff;
+  background-color: #7f8185;
+  font-size: 16px;
+  padding-left: 200px;
+  padding-right: 200px;
+  padding-top: 5px;
+}
+
+h2{
+  font-size: 30px
+}
+
+hr{
+  border-style: solid;
+  border-color: #ffc0cb;
+}
+
+#boxFoo{
+  padding-right: 180px;
+}
