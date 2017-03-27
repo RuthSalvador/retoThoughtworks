@@ -344,6 +344,12 @@ button:focus {
   outline:0;
 }
 
+#virtual-div {
+  text-align: center;
+  font-size: 100%;
+  color: #797979;
+}
+
 #help-div td{
   text-align: center;
 }

@@ -59,8 +59,8 @@ var tabsAgent = document.getElementsByName('tabs-agent');
       }
 
       if (currentTabx == 'all') {
-      show(all);
-      hide(physical, virtual);
+      show(physical);
+      show(virtual);
       }
       if (currentTabx == 'physical') {
       show(physical);
