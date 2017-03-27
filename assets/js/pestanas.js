@@ -1,9 +1,9 @@
 //Pestañas DASHBOARD, MY CRUISE, AGENTS y HELP
-var tabsGeneral = document.getElementsByClassName('tabs-general');
+var tabsGeneral = document.getElementsByName('tabs-general');
 
 for (var i = 0; i < tabsGeneral.length; i++) {
   tabsGeneral[i].addEventListener('click',function(e) {
-    e.preventDefault();
+    // e.preventDefault(); /* el evento no debe ser cancelable*/
     var currentTab = e.target.id;
     var dashboard = document.getElementById('dashboard-div');
     var cruise = document.getElementById('cruise-div');
@@ -22,6 +22,7 @@ for (var i = 0; i < tabsGeneral.length; i++) {
     if (currentTab == 'dashboard') {
     show(dashboard);
     hide(cruise, agents, help);
+
     }
     if (currentTab == 'cruise') {
     show(cruise);
@@ -39,11 +40,11 @@ for (var i = 0; i < tabsGeneral.length; i++) {
 }
 
 
-var tabsAgent = document.getElementsByClassName('tabs-agent');
+var tabsAgent = document.getElementsByName('tabs-agent');
 
   for (var i = 0; i < tabsAgent.length; i++) {
     tabsAgent[i].addEventListener('click',function(e) {
-      e.preventDefault();
+      //e.preventDefault();
       var currentTabx = e.target.id;
       var all = document.getElementById('all-div');
       var physical = document.getElementById('physical-div');

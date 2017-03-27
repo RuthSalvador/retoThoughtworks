@@ -38,11 +38,11 @@ th, td {
 }
 
 footer {
-  display: inline;
   text-align: center;
   margin-left: auto;
   margin-right: auto;
   font-size: 85%;
+  background-color: #bdbbb4;
 }
 
 .header-table {
@@ -263,11 +263,11 @@ footer {
 .hidden {
   display: none;
 }
-/*
+
 .tabs-general {
 	display: none;
 }
-*/
+
 .tabs-agent {
 	display: none;
 }
