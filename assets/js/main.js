@@ -161,16 +161,28 @@ function Agent(type, status, web, ip, path, agentId) {
               spanLabelBtn.appendChild(label);
               spanLabelBtn.appendChild(deleteResource);
               deleteResource.addEventListener('click', function(e){
-                var index = e.target.id;
-                console.log(index);
-                //arrResources.splice(index, 2);
-                delete arrResources[index];
-                //arrResources = arrResources.filter(Boolean);
-                console.log(arrResources);
+                var currentId = e.target.id;
 
+                function findIndex(id) {
+                var btsClass = document.getElementsByClassName('deleteResource');
+                for (var i = 0; i < btsClass.length; i++) {
+                  if (btsClass[i].id === id)
+                    return i;
+                  }
+                return -1;
+                }
+
+                var index = findIndex(currentId);
+                console.log(index);
+
+                //Elimino recurso de HTML
                 if (e.target.parentNode){
                   e.target.parentNode.remove();
                 }
+                //Elimino recurso de arreglo
+                arrResources.splice(index, 1);
+
+                console.log(arrResources);
 
               });
             }

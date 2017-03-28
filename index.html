@@ -31,15 +31,67 @@
       <div id="contenido">
         <div id="dashboard-div" class="hidden">
           <table>
+            <tr class="header-table">
+              <td>Organize your dashboard</td>
+            </tr>
             <tr>
-              <td><p>Welcome to DASHBOARD!</p></td>
+              <td>
+                  <img src="assets\img\VisualStatsv2.jpg" alt="" class="dashboard-img">
+              </td>
             </tr>
           </table>
         </div>
         <div id="cruise-div" class="hidden">
           <table>
-            <tr>
-              <td><p>Welcome to MY CRUISE!</p></td>
+            <tr class="header-table">
+              <td>Welcome!</td>
+            </tr>
+            <tr  class="profile">
+              <td>
+                <div class="form-container">
+                  <div class="form-div-profile">
+                    <form class="form-profile" onsubmit="return false">
+                      <h3>Edit profile</h3>
+                      <div class="inputs-div">
+                        <span>
+                          <label for="first">FIRST NAME</label><br>
+                          <input type="text" placeholder="Ana" >
+                        </span>
+                        <span>
+                          <label for="first">LAST NAME</label><br>
+                          <input type="text"  placeholder="Martínez" >
+                        </span>
+                        <span>
+                          <label for="first">E-MAIL ADDRESS</label><br>
+                          <input type="text"  placeholder="amartinez@thougthworks.com" >
+                        </span>
+                        <span>
+                          <label for="first">TELEPHONE</label><br>
+                          <input type="text" placeholder="987123654"  >
+                        </span>
+                        <span>
+                          <label for="first">ADDRESS</label><br>
+                          <input type="text"  placeholder="Bld Mihail Kogalniceanu, nr. 8 Bl" >
+                        </span>
+                        <span>
+                          <label for="first">CITY</label><br>
+                          <input type="text" placeholder="Anytown">
+                        </span>
+                        <input type="submit" name="" value="UPDATE PROFILE">
+                      </div>
+                    </form>
+                  </div>
+                  <div class="edit-pic">
+                    <div class="profile-view">
+                      <img src="assets\img\profile.png" alt="profilepic">
+                    </div>
+                    <form onsubmit="return false">
+                      <input type="file" name="" value="upload picture">
+                      <input type="submit" name="" value="UPLOAD PHOTO">
+                    </form>
+                  </div>
+                </div>
+              </td>
             </tr>
           </table>
         </div>
@@ -92,17 +144,20 @@
         </div>
         <div id="help-div" class="hidden">
           <table>
+            <tr class="header-table">
+              <td>We are glad to help you!</td>
+            </tr>
             <tr>
-              <td>
-                <h4>If you need support, please write to <a href="mailto:support@thoughtworks.com">support@thoughtworks.com</a> or complete the form:</h4>
+              <td class="form">
+                <strong>If you need support, please write to <a href="mailto:support@thoughtworks.com">support@thoughtworks.com</a> or complete the next form:</strong>
                 <form id="formularioHelp" action="mailto:support@thoughtworks.com" method="post">
                   <div>
-                    <label for="nombreHelp">Name:</label><br>
+                    <label for="nombreHelp">NAME:</label><br>
                       <input type="text" id="nombreHelp"class="form-control" placeholder="Please enter your name" autofocus required><br><br>
-                    <label for="emailHelp">Email:</label><br>
+                    <label for="emailHelp">E-MAIL:</label><br>
                       <input type="email" id="emailHelp" class="form-control" placeholder="Please enter your email" required><br><br>
-                    <label for="commentHelp">Your comment:</label><br>
-                      <textarea id="commentHelp" class="form-control" placeholder="Please enter your comment" rows="5" cols="50" required></textarea><br><br>
+                    <label for="commentHelp">YOUR COMMENT:</label><br>
+                      <textarea id="commentHelp" class="form-control" placeholder="Please enter your comment" rows="5" cols="50" required></textarea><br>
                     <input type="submit" value="SEND"><br><br>
                   </div>
                 </form>

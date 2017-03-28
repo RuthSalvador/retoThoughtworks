@@ -141,11 +141,6 @@ footer > hr{
   /*background-color: yellow;*/
 }
 
-.display-agents {
-  padding-bottom: 14px;
-  font-size: 100%;
-}
-
 .user-resources1 {
   border-radius: 10px;
   border: 2px solid #61605A;
@@ -359,13 +354,111 @@ button:focus {
   outline:0;
 }
 
+.dashboard-img {
+  width: 90%;
+  height: auto;
+  display: block;
+  margin: 0 auto;
+  display: block;
+}
+
+
+.profile {
+  background-color: #f1f1f1;
+}
+
+.form-container {
+  border-radius: 10px;
+  border: 2px solid #61605A;
+  padding: 14px;
+  width: 96%;
+  height: auto;
+  margin: auto;
+  margin-bottom: 15px;
+  padding-top: 0px;
+  background-color: #ffffff;
+  display: block;
+  padding-bottom: 78px;
+}
+
+.form-profile {
+  display: inline;
+}
+
+.edit-pic {
+  display: inline;
+}
+
+.edit-pic form {
+  float: right;
+  text-align: center;
+}
+
+.form-profile span {
+  display: inline-block;
+  font-size: 77%;
+  vertical-align: middle;
+}
+
+.inputs-div {
+  width: 50%;
+  display: inline-block;
+}
+.profile-view {
+  display: inline-block;
+  width: 200px;
+  height: 200px;
+  position: relative;
+  overflow: hidden;
+  -webkit-border-radius: 50%;
+  -moz-border-radius: 50%;
+  -ms-border-radius: 50%;
+  -o-border-radius: 50%;
+  border-radius: 50%;
+  margin-left: 8%;
+}
+
+.form-div-profile {
+  display: inline;
+}
+
+img {
+    display: inline;
+    margin: 0 auto;
+    height: 100%;
+    width: auto;
+}
+
+.form-profile input[type=text], input[type=submit]  {
+    width: 94%;
+    padding: 12px 20px;
+    margin: 8px 0;
+    display: inline-block;
+    border: 1px solid #c3bfbf;
+    background-color: #f1f1f1;
+    border-radius: 4px;
+    box-sizing: border-box;
+}
+
+.form-profile input[type=submit] {
+  color: #ffffff;
+  background-color: #6cb9df;
+  cursor: pointer;
+  outline:0;
+}
+
+.form-profile input[type=submit]:hover {
+  color: #ffffff;
+  background-color: #3ba4d9;
+}
+
 #virtual-div {
   text-align: center;
   font-size: 100%;
   color: #797979;
 }
 
-#help-div td{
+#help-div .form{
   text-align: center;
 }
 
@@ -386,10 +479,11 @@ button:focus {
   text-align: center;
   text-decoration: none;
   display: inline-block;
-  border-radius: 12px;
+  border-radius: 4px;
   padding: 7px 30px 7px 30px;
   cursor: pointer;
   font-weight: bold;
+  outline:0;
 }
 
 #help-div input[type=submit]:hover {
@@ -402,9 +496,17 @@ button:focus {
     margin: 8px 0;
     display: inline-block;
     border: 1px solid #c3bfbf;
-    background-color: #dedede;
+    background-color: #f1f1f1;
     border-radius: 4px;
     box-sizing: border-box;
+}
+
+#formularioHelp {
+  margin-top: 15px;
+}
+
+#formularioHelp label{
+  font-size: 77%;
 }
 
 /*Icons*/
