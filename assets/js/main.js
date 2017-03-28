@@ -233,3 +233,8 @@ agent4.addResources();
 AgentManager.all.push(agent4);
 
 console.log(AgentManager.all);
+
+//Pruebas unitarias
+if(typeof exports !== 'undefined') {
+    exports.Agent = Agent;
+}
