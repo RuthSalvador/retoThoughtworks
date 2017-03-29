@@ -169,7 +169,7 @@ function Agent(type, status, web, ip, path, agentId) {
                   if (btsClass[i].id === id)
                     return i;
                   }
-                return -1;
+                alert("recurso no encontrado");
                 }
 
                 var index = findIndex(currentId);
